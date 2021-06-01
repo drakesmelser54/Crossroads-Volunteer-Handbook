@@ -1,29 +1,19 @@
-# Savvy Coders Project Boilerplate Starter Kit
+# Crossroads Volunteer Handbook
 
-## Overview
+## Mission
 
-This template repository contains several opinionated, 'starter' files and settings to help Savvy Coder students focus more time and energy on learning how to code and/or craft 'business logic' for projects and less time on configurations.
+To help gamify and improve the onboarding process volunteers face when onboarding for Crossroads, this SPA will make complex domestic violence info much more palatable and easy to learn. 
 
-In addition to a '.gitignore' and some VS Code specific extensions and settings, it includes the 'recommended' settings for:
+## How it works?
 
-1. [ESLint](eslint.org)
-2. [Stylelint](stylelint.io)
-3. [Prettier](prettier.io)
+The online Volunteer Handbook will work as an online lesson to teach volunteers about the everything from the history of Crossroads, to domestic violence info, and ultimately how a volunteer can help the victims while on-site. 
 
-## Get Started
+## Confidentiality
 
-**First and foremost,** make sure that your local machine is set up with all of the 'dev environment tooling' as per the instructions in the curriculum.
+To protect domestic violence victims, no mention of location, people involved, or any incriminating info will be used in this site. In addition, users must have a login approved by the volunteer coordinator to undergo the lesson.
 
-Well, after establishing your directory structure on your local machine, (e.g. '~/Code/SavvyCoders'), clone the Savvy Starter Repo - essentially, there should be a button that says **Use this template.**
+## Collaborators 
 
-> [Read more about using templates on GitHub here...](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)
+My wife and I created this site. It is a non-profit project for Crossroads. 
 
-Once this repo has been created on your GitHub, you can click on the button to 'clone' it as usual.
 
-Once it's `clone`d to your local machine, `cd` into the directory and **be sure to do:** `npm i` to get all of the dependencies installed. If you see any _errors_ (warnings are OK) on Windows, you may have to do `npm install`.
-
-Now, enter `code .` to open this project in VS Code, and look for a prompt to 'install some extensions' once inside VS Code (in the bottom `right` of your screen). You should install these.
-
-In your repo, feel free to update this README and make any other initial changes to files, etc. Then go ahead and do your usual `git` steps -- add, commit, and push.
-
-**Note:** This is a template repository, no need to 'fork it.
