@@ -22,6 +22,8 @@
     "stylelint-vscode": "^7.0.0-6"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
+    "navigo": "^7.1.3",
     "node": "^15.8.0",
     "parcel-bundler": "^1.12.5",
     "yargs-parser": ">=13.1.2"
