@@ -1,6 +1,6 @@
 export default () => `
-<section class="home-page-jumbotron">
-  <section class="login-container">
+<section class="home-jumbotron">
+  <section class="login-signup-container">
     <h2>Login</h2>
     <form id="login-form">
       <input type="email" id="login-username" placeholder="type email here">

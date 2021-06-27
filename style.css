@@ -79,7 +79,7 @@ body {
 }
 
 /*Login and Signup Pages*/
-.login-container {
+.login-signup-container {
   height: 40vh;
   width: 20vw;
   margin-bottom: 8%;
@@ -90,6 +90,92 @@ body {
   color: white;
   text-align: center;
 }
+
+.login-container > a {
+  color: white;
+}
+
+
+/*Forms---------------------------*/
+/*Form-inputs*/
+input, input[type=email], input[type=password], input[type=text] select {
+  padding: 1vh 1vw;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+input[type="email"]::placeholder, input[type="password"]::placeholder, input[type="text"]::placeholder{
+  color: white;
+}
+
+input[type=submit], select {
+  border: 1px solid white;
+  border-radius: 10px;
+  background: transparent;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 4px 12px;
+  cursor: pointer;
+  width: 200px;
+}
+
+textarea, select {
+  padding: 2vh 2vw;
+  margin: 8px 0;
+  width: 80%;
+  height: 25%;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/*Form Containers*/
+.forms {
+  padding: 10vh;
+  font-size: large;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.forms > input {
+  margin: 5vh;
+  text-align: center;
+  padding: 1vh 1vw;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: 'Raleway', Helvetica, sans-serif;
+  text-align: center;
+}
+
+.forms > textarea {
+  margin: 5vh;
+  width: 30vw;
+  height: 20vh;
+}
+
+.forms > h2 {
+  border-bottom: 1px white solid;
+  padding-bottom: 5vh;
+  margin: 5vh 5vw;
+}
+
+.forms > a {
+  color: white;
+}
+
 
 /*footer------------*/
 .footer {
