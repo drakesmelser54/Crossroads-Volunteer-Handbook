@@ -45,16 +45,14 @@ function listenForSignup(st) {
       const inputs = inputList.map(input => input.value);
       let email = inputs[0];
       let password = inputs[1];
-      let name = inputs[2];
-
       //create user in firebase
       auth.createUserWithEmailAndPassword(email, password).then(response => {
         //add user to state and database
         addUserToStateAndDB(
           email,
-          password,
-          name
+          password
         );
+      render(state.LessonPath);
       });
     });
   }
@@ -63,11 +61,9 @@ function listenForSignup(st) {
 //--------add user to state and db-----------/
 function addUserToStateAndDB(
   email,
-  password,
-  name
+  password
 ) {
   state.User.email = email;
-  state.User.name = name;
   state.User.loggedIn = true;
 
   db.collection("users").add({
