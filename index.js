@@ -52,8 +52,9 @@ function listenForSignup(st) {
           email,
           password
         );
-      render(state.LessonPath);
+      render(state.Welcome);
       });
+      router.navigate("/Welcome")
     });
   }
 }
@@ -88,7 +89,7 @@ function listenForLogin(st) {
       let password = inputs[1];
       auth.signInWithEmailAndPassword(email, password).then(() => {
         getUserFromDb(email)
-          .then(() => render(state.Profile), router.navigate("/Profile"))
+          .then(() => render(state.Welcome), router.navigate("/Welcome"))
       });
     });
   }

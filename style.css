@@ -177,6 +177,36 @@ textarea, select {
 }
 
 
+/*------Lesson-Path-Page-------*/
+.lesson-path {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  padding-top: 10vh;
+  height: 100vh;
+  width: 100%;
+}
+
+#lesson-button {
+  border: 1px solid black;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.lesson-boxes {
+  border: 1px solid black;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  cursor: pointer;
+  height: 8vh;
+  width: 60vw;
+}
 /*footer------------*/
 .footer {
     height: 20vh;
