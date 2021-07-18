@@ -1,25 +1,74 @@
 export default () => `
   <div class="lesson-path">
     <div class="lesson-boxes">
-      <a>OUR STORY</a>
+      <div class="lesson-top">
+        <h2>Our Story</h2>
+        <p id="time">30 mins</p>
+        <i id="time" class="far fa-clock"></i>
+      </div>
+      <div class="lesson-bottom">
+        <a>Start Lesson</a>
+      </div>
     </div>
     <div class="lesson-boxes">
-      <a>MISSION, VISION, AND VALUES</a>
+      <div class="lesson-top">
+        <h2>Mission, Vision, & Values</h2>
+        <p id="time">30 mins</p>
+        <i id="time" class="far fa-clock"></i>
+      </div>
+      <div class="lesson-bottom">
+        <a>Start Lesson</a>
+      </div>
     </div>
     <div class="lesson-boxes">
-      <a>WHAT WE DO</a>
+      <div class="lesson-top">
+        <h2>What We Do</h2>
+        <p id="time">30 mins</p>
+        <i id="time" class="far fa-clock"></i>
+      </div>
+      <div class="lesson-bottom">
+        <a>Start Lesson</a>
+      </div>
     </div>
     <div class="lesson-boxes">
-      <a>WHO WE ARE</a>
+      <div class="lesson-top">
+        <h2>Who We Are</h2>
+        <p id="time">30 mins</p>
+        <i id="time" class="far fa-clock"></i>
+      </div>
+      <div class="lesson-bottom">
+        <a>Start Lesson</a>
+      </div>
     </div>
     <div class="lesson-boxes">
-      <a>VOLUNTEERING</a>
+      <div class="lesson-top">
+        <h2>Volunteering</h2>
+        <p id="time">30 mins</p>
+        <i id="time" class="far fa-clock"></i>
+      </div>
+      <div class="lesson-bottom">
+        <a>Start Lesson</a>
+      </div>
     </div>
     <div class="lesson-boxes">
-      <a>POLICY</a>
+    <div class="lesson-top">
+      <h2>Policy</h2>
+      <p id="time">30 mins</p>
+      <i id="time" class="far fa-clock"></i>
     </div>
-    <div class="lesson-boxes">
-      <a>DOMESTIC VIOLENCE OVERVIEW</a>
+    <div class="lesson-bottom">
+      <a>Start Lesson</a>
     </div>
   </div>
+  <div class="lesson-boxes">
+  <div class="lesson-top">
+    <h2>Domoestic Violence Overview</h2>
+    <p id="time">30 mins</p>
+    <i id="time" class="far fa-clock"></i>
+  </div>
+  <div class="lesson-bottom">
+    <a>Start Lesson</a>
+  </div>
+</div>
+</div>
 `;

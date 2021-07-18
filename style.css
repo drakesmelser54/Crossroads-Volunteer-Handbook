@@ -1,24 +1,24 @@
 body {
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-  }
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
 
 h1 {
-font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 h2 {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 h3 {
- font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 p {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 #Nav-Banner {
@@ -28,29 +28,27 @@ p {
   padding-left: 15px;
 }
 .nav-bar {
-    width: 100%;
-    height: 8vh;
-    background-color: white;
-    display: inline-flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    position: fixed;
-    z-index: 10;
-    margin: 0px;
-    box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
-    }
+  width: 100%;
+  height: 8vh;
+  background-color: white;
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 10;
+  margin: 0px;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+}
 
 .nav-left {
   display: inline-flex;
   align-items: flex-end;
   justify-content: space-evenly;
-
 }
 
 /*home page----------------------*/
 .home-jumbotron {
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)) ,
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("https://github.com/drakesmelser54/Crossroads-Volunteer-Handbook/blob/master/images/crossroads-building.jpeg?raw=true");
   background-size: cover;
   height: 100vh;
@@ -102,15 +100,17 @@ p {
   text-align: center;
 }
 
-.login-signup-container  a {
+.login-signup-container a {
   color: white;
   text-decoration: none;
 }
 
-
 /*Forms---------------------------*/
 /*Form-inputs*/
-input, input[type=email], input[type=password], input[type=text] select {
+input,
+input[type="email"],
+input[type="password"],
+input[type="text"] select {
   padding: 1vh 1vw;
   margin: 8px 0;
   display: inline-block;
@@ -119,17 +119,19 @@ input, input[type=email], input[type=password], input[type=text] select {
   color: white;
   box-sizing: border-box;
   text-align: center;
-  font-family: 'Quicksand', sans-serif;
-
+  font-family: "Quicksand", sans-serif;
 }
 
-input[type="email"]::placeholder, input[type="password"]::placeholder, input[type="text"]::placeholder{
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="text"]::placeholder {
   background: transparent;
   color: white;
- font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
-input[type=submit], select {
+input[type="submit"],
+select {
   border: 1px solid white;
   background: transparent;
   color: white;
@@ -138,10 +140,11 @@ input[type=submit], select {
   margin: 4px 12px;
   cursor: pointer;
   width: 200px;
-font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
-textarea, select {
+textarea,
+select {
   padding: 2vh 2vw;
   margin: 8px 0;
   width: 80%;
@@ -150,7 +153,7 @@ textarea, select {
   border: 1px solid #ccc;
   box-sizing: border-box;
   text-align: center;
-font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 /*Form Containers*/
@@ -170,7 +173,7 @@ font-family: 'Quicksand', sans-serif;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  font-family: 'Raleway', Helvetica, sans-serif;
+  font-family: "Raleway", Helvetica, sans-serif;
   text-align: center;
 }
 
@@ -190,14 +193,13 @@ font-family: 'Quicksand', sans-serif;
   color: white;
 }
 
-
 /*------Lesson-Path-Page-------*/
 .lesson-path {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   height: 100vh;
   width: 100%;
 }
@@ -208,7 +210,7 @@ font-family: 'Quicksand', sans-serif;
   justify-content: space-evenly;
   align-items: center;
   border: 1px none;
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   text-decoration: none;
   height: 80vh;
@@ -217,51 +219,80 @@ font-family: 'Quicksand', sans-serif;
 #lesson-button {
   border: 1px solid none;
   text-decoration: none;
-  background-color: #6E3A84;
+  background-color: #6e3a84;
   color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   padding: 10px 20px;
   cursor: pointer;
-
 }
 .lesson-boxes {
-  border: 1px solid black;
-    font-family: 'Quicksand', sans-serif;
+  border: 1.5px solid black;
+  font-family: "Quicksand", sans-serif;
   text-decoration: none;
+  background-color: white;
   color: black;
-  padding: 10px 20px;
   cursor: pointer;
-  height: 8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+  align-items: center;
+  height: 11vh;
   width: 60vw;
 }
+
+.lesson-top {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 8%;
+  width: 100%;
+  height: 60%;
+}
+
+.lesson-bottom {
+  height: 40%;
+  width: 100%;
+  background-color: #6e3a84;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#time {
+  font-size: small;
+  padding-left: 10px;
+}
+
 /*footer------------*/
 .footer {
-    height: 20vh;
-    width: auto;
-    background-color: #3d4452;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
+  height: 20vh;
+  width: auto;
+  background-color: #3d4452;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-  .footer > h4 {
-    border-bottom: 1px solid white;
-    padding-bottom: 20px;
-  }
-  .footer-links {
-    display: inline-flex;
-    font-size: 4vh;
-    width: 20vw;
-    justify-content: space-between;
-    text-decoration: none;
-    color: white;
-  }
+.footer > h4 {
+  border-bottom: 1px solid white;
+  padding-bottom: 20px;
+}
+.footer-links {
+  display: inline-flex;
+  font-size: 4vh;
+  width: 20vw;
+  justify-content: space-between;
+  text-decoration: none;
+  color: white;
+}
 
-  .footer-links > a {
-    text-decoration: none;
-    color: white;
-  }
+.footer-links > a {
+  text-decoration: none;
+  color: white;
+}
