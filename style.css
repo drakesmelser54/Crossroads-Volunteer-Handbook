@@ -197,11 +197,18 @@ select {
 .lesson-path {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  background-color: #f7f7f7;
-  height: 100vh;
+  text-decoration: none;
+  background-color: #eeeeee;
+  padding: 10vh 0;
+  height: 100%;
   width: 100%;
+}
+
+.lesson-path a {
+  text-decoration: none;
+  color: white;
 }
 
 .welcome-box {
@@ -226,6 +233,7 @@ select {
   padding: 10px 20px;
   cursor: pointer;
 }
+
 .lesson-boxes {
   border: 1.5px solid black;
   font-family: "Quicksand", sans-serif;
@@ -237,15 +245,15 @@ select {
   flex-direction: column;
   justify-content:flex-end;
   align-items: center;
-  height: 11vh;
+  margin-bottom: 5vh;
+  height: 12vh;
   width: 60vw;
 }
 
 .lesson-top {
   display: flex;
-  align-items: center;
-  justify-content: start;
-  padding-left: 8%;
+  align-items: baseline;
+  padding-left: 10%;
   width: 100%;
   height: 60%;
 }
@@ -263,7 +271,6 @@ select {
 
 #time {
   font-size: small;
-  padding-left: 10px;
 }
 
 /*footer------------*/

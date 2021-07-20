@@ -3,11 +3,12 @@ export default () => `
     <div class="lesson-boxes">
       <div class="lesson-top">
         <h2>Our Story</h2>
-        <p id="time">30 mins</p>
-        <i id="time" class="far fa-clock"></i>
+        <p id="time"><i>A timeline of Crossroads' History</i></p>
+          <p id="time">30 mins</p>
+          <i id="time" class="far fa-clock"></i>
       </div>
       <div class="lesson-bottom">
-        <a>Start Lesson</a>
+        <a href="/Story" data-navigo>Start Lesson</a>
       </div>
     </div>
     <div class="lesson-boxes">

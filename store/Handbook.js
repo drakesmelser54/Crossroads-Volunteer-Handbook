@@ -1,3 +1,3 @@
 export default {
-  view: "Handbook",
+  view: "Handbook"
 };
