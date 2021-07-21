@@ -193,7 +193,7 @@ select {
   color: white;
 }
 
-/*------Lesson-Path-Page-------*/
+/*------Handbook----------------*/
 .lesson-path {
   display: flex;
   flex-direction: column;
@@ -223,7 +223,7 @@ select {
   height: 80vh;
   width: 60vw;
 }
-#lesson-button {
+#lesson-button, #next-button {
   border: 1px solid none;
   text-decoration: none;
   background-color: #6e3a84;
@@ -273,6 +273,40 @@ select {
   font-size: small;
 }
 
+/*-------Our Story----------*/
+.story-jumbotron {
+  height: 140vh;
+  width: 100%;
+  background-color: whitesmoke;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.stories {
+  height: auto;
+  width: 40vw;
+  background-color: white;
+  border: 2px solid #b492c4;
+  color: black;
+  padding: 15px;
+  text-align: left;
+  margin-bottom: 5vh;
+}
+
+#history-header {
+  border: 2px solid black;
+  color: black;
+  background-color: white;
+  padding: 10px;
+}
+#story-headers {
+  border-bottom: 2px solid black;
+  color: black;
+}
 /*footer------------*/
 .footer {
   height: 20vh;
@@ -303,3 +337,7 @@ select {
   text-decoration: none;
   color: white;
 }
+
+/*----------media querys-------------*/
+
+/*-----Our Story----*/
