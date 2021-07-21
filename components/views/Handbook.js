@@ -2,9 +2,8 @@ export default () => `
   <div class="lesson-path">
     <div class="lesson-boxes">
       <div class="lesson-top">
-        <h2>Our Story</h2>
-        <p id="time"><i>A timeline of Crossroads' History</i></p>
-          <p id="time">30 mins</p>
+          <h2>Our Story</h2>
+          <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
           <i id="time" class="far fa-clock"></i>
       </div>
       <div class="lesson-bottom">
@@ -14,7 +13,7 @@ export default () => `
     <div class="lesson-boxes">
       <div class="lesson-top">
         <h2>Mission, Vision, & Values</h2>
-        <p id="time">30 mins</p>
+        <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
         <i id="time" class="far fa-clock"></i>
       </div>
       <div class="lesson-bottom">
@@ -24,7 +23,7 @@ export default () => `
     <div class="lesson-boxes">
       <div class="lesson-top">
         <h2>What We Do</h2>
-        <p id="time">30 mins</p>
+        <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
         <i id="time" class="far fa-clock"></i>
       </div>
       <div class="lesson-bottom">
@@ -34,7 +33,7 @@ export default () => `
     <div class="lesson-boxes">
       <div class="lesson-top">
         <h2>Who We Are</h2>
-        <p id="time">30 mins</p>
+        <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
         <i id="time" class="far fa-clock"></i>
       </div>
       <div class="lesson-bottom">
@@ -44,7 +43,7 @@ export default () => `
     <div class="lesson-boxes">
       <div class="lesson-top">
         <h2>Volunteering</h2>
-        <p id="time">30 mins</p>
+        <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
         <i id="time" class="far fa-clock"></i>
       </div>
       <div class="lesson-bottom">
@@ -54,7 +53,7 @@ export default () => `
     <div class="lesson-boxes">
     <div class="lesson-top">
       <h2>Policy</h2>
-      <p id="time">30 mins</p>
+      <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
       <i id="time" class="far fa-clock"></i>
     </div>
     <div class="lesson-bottom">
@@ -64,7 +63,7 @@ export default () => `
   <div class="lesson-boxes">
   <div class="lesson-top">
     <h2>Domoestic Violence Overview</h2>
-    <p id="time">30 mins</p>
+    <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
     <i id="time" class="far fa-clock"></i>
   </div>
   <div class="lesson-bottom">

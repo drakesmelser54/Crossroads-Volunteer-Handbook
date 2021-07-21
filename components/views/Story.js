@@ -1,6 +1,12 @@
 export default () => `
 <div class="story-jumbotron">
-  <h1 id="history-header">A Brief History of Crossroads</h1>
+  <div class="upper-story-container">
+    <div id="previous-lesson">
+      <i class="fas fa-long-arrow-alt-left"></i>
+      <p>&nbsp&nbspPrevious Lesson</p>
+    </div>
+    <h2 id="history-header">A Brief History of Crossroads</h2>
+  </div>
   <h2 id="story-headers">1894</h2>
   </h2>
   <div class="stories">
@@ -18,6 +24,6 @@ export default () => `
     <p>On July 1, 2016, the Women’s Center of RI merged into the Domestic Violence Program of Crossroads RI. As domestic violence is one of the leading causes of homelessness for women and children, both organizations strive to empower vulnerable individuals and families to overcome homelessness and live, safe, self-sufficient lives free of violence. The merger has enabled us to better address the connection between domestic violence and homelessness.
     </p>
   </div>
-  <a id="next-button" href="/Handbook" data-navigo>Next</a>
+  <a id="next-button" href="/Handbook" data-navigo>Next Lesson</a>
 </div>
 `;
