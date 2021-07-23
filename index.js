@@ -4,6 +4,7 @@ import * as state from "./store";
 import Navigo from "navigo";
 import { capitalize } from "lodash";
 import { auth, db } from "./firebase";
+import { doc } from "prettier";
 
 //-----------------------------------router fxn-----------------------------------------------------
 const router = new Navigo(window.location.origin);
@@ -31,6 +32,8 @@ function render(st = state.Home) {
 function eventListenerBundler(st) {
   listenForLogin(st);
   listenForSignup(st);
+  storyComplete(st);
+  logoutListener(st);
 }
 
 //----------signup-form-------------/
@@ -64,11 +67,12 @@ function listenForSignup(st) {
 function addUserToStateAndDB(email, password) {
   state.User.email = email;
   state.User.loggedIn = true;
+  state.User.story = false;
 
   db.collection("users").add({
     email: email,
-    signedIn: true,
     loggedIn: true,
+    story: false
   });
 }
 
@@ -96,18 +100,19 @@ function listenForLogin(st) {
   }
 }
 
-//------------------------------------//
+
+//--------get user from db-------//
 function getUserFromDb(email) {
   return db
     .collection("users")
     .get()
-    .then((snapshot) =>
-      snapshot.docs.forEach((doc) => {
+    .then(snapshot =>
+      snapshot.docs.forEach(doc => {
         if (email === doc.data().email) {
           let id = doc.id;
           db.collection("users")
             .doc(id)
-            .update({ signedIn: true });
+            .update({ loggedIn: true });
           let user = doc.data();
           state.User.email = user.email;
           state.User.loggedIn = true;
@@ -116,5 +121,97 @@ function getUserFromDb(email) {
     );
 }
 
+//------------------------log out-------------------------//
+//-----log-out main fxn-----//
+function logoutListener(user) {
+  //select log-out a tag in nav//
+  document.querySelector("#log-out").addEventListener("click", event => {
+    //condition if user is logged-in//
+    if (user.loggedIn) {
+      event.preventDefault();
+      //log-out fxn//
+      auth.signOut().then(() => {
+        //logOutUserInDb(user.email);
+        resetUserInState();
+        render(state.Home);
+        router.navigate("/Home");
+      });
+    }
+  });
+}
+//---------log-out in Db-------//
+
+//fxn not working properly, not logging people out of the db, doesn't really matter for this project//
+//function logOutUserInDb(email) {
+//   if (state.User.loggedIn) {
+//     db.collection("users")
+//       .get()
+//       .then(snapshot =>
+//         snapshot.docs.forEach(doc => {
+//           if (email === doc.data().email) {
+//             let id = doc.id;
+//             db.collection("users")
+//               .doc(id)
+//               .update({ loggedIn: false });
+//           }
+//         })
+//       );
+//   }
+// }
+
+//---------reset user in state-------//
+function resetUserInState() {
+  state.User.email = "";
+  state.User.loggedIn = false;
+  state.User.story = false;
+}
 
 
+//--------turn completed lessons green------------------//
+function greenCompletion(st) {
+  if (st.view === "Handbook") {
+    //map through user object in state and find lessons that are labeled true (completed)
+    state.User.forEach(lesson => {
+      if (true === lesson) {
+    //if true, change css to change lesson box from purple to green for that lesson
+       //set completed lessons to the html id's of the appropriate lesson boxes
+       //change the css for those boxes to green
+      }
+    });
+  }
+}
+//----------------Our Story Lesson Completion----------------//
+//-main complete fxn----//
+function storyComplete(st) {
+  if (st.view === "Story") {
+    document
+      .querySelector("#next-button")
+      .addEventListener("click", (event) => {
+        event.preventDefault();
+        storyDbUpdate(st);
+        state.User.story = true;
+        turnGreen(st);
+      })
+  }
+}
+
+
+//-db updating that our story lesson is complete--//
+function storyDbUpdate()
+ {
+  return db
+    .collection("users")
+    .get()
+    .then(snapshot =>
+      snapshot.docs.forEach(doc => {
+        if (state.User.email === doc.data().email) {
+          let id = doc.id;
+          db.collection("users")
+            .doc(id)
+            .update({
+              story: true
+            });
+        }
+      })
+    );
+}

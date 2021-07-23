@@ -1,4 +1,5 @@
 export default {
   email: "",
-  loggedIn: false
+  loggedIn: false,
+  story: false
 };
