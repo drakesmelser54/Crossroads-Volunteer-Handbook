@@ -1,5 +1,7 @@
 export default {
   email: "",
   loggedIn: false,
-  story: false
+  lessons: {
+    story: false
+  }
 };

@@ -34,6 +34,7 @@ function eventListenerBundler(st) {
   listenForSignup(st);
   storyComplete(st);
   logoutListener(st);
+  turnGreen(st);
 }
 
 //----------signup-form-------------/
@@ -68,12 +69,12 @@ function listenForSignup(st) {
 function addUserToStateAndDB(email) {
   state.User.email = email;
   state.User.loggedIn = true;
-  state.User.story = false;
+  state.User.lessons[0] = false;
 
   db.collection("users").add({
     email: email,
     loggedIn: true,
-    story: false
+    lessons: { story: false}
   });
 }
 
@@ -146,7 +147,7 @@ function logoutListener(user) {
 function resetUserInState() {
   state.User.email = "";
   state.User.loggedIn = false;
-  state.User.story = false;
+  state.User.lessons[0] = false;
 }
 
 //----------------Our Story Lesson Completion----------------//
@@ -157,9 +158,10 @@ function storyComplete(st) {
       .querySelector("#next-button")
       .addEventListener("click", (event) => {
         event.preventDefault();
-        storyDbUpdate();
-        state.User.story = true;
-        // turnGreen(st);
+        storyDbUpdate()
+        .then(() => {
+        state.User.lessons[0] = true;
+        })
       })
   }
 }
@@ -176,12 +178,43 @@ function storyDbUpdate()
           db.collection("users")
             .doc(id)
             .update({
-              story: true
+              lessons: { story: true }
             });
         }
       })
     );
 }
+
+
+function turnGreen(st) {
+ if (st.view === "Handbook")
+  return db
+    .collection("users")
+    .get()
+    .then(snapshot => snapshot.docs.forEach(doc => {
+      if (state.User.email === doc.data()) {
+        let id = doc.id;
+        db.collection("users")
+        .doc(id.lessons)
+        .forEach(lesson => {
+          if (lesson) return
+          document.querySelector(`#${lesson}`).className = "is-completed"
+        })
+      }
+    })
+    )}
+
+      // snapshot =>
+      //   snapshot.docs.forEach(doc => {
+      //     if (state.User.email === doc.data()) {
+      //       let id = doc.id;
+      //       db.collection("users")
+      //       .doc(id)
+      //       .forEach(lesson => {
+      //         if (lesson) return
+      //         document.querySelector(`#${lesson}`).className = "is-completed"
+
+
 
 //----------------incomplete functions---------------------------------------------//
 //----------------Our Story Lesson Completion----------------//

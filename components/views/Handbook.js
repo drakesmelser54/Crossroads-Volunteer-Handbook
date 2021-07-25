@@ -6,7 +6,7 @@ export default () => `
           <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
           <i id="time" class="far fa-clock"></i>
       </div>
-      <div class="lesson-bottom">
+      <div id="story" class="story">
         <a href="/Story" data-navigo>Start Lesson</a>
       </div>
     </div>
@@ -16,7 +16,7 @@ export default () => `
         <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
         <i id="time" class="far fa-clock"></i>
       </div>
-      <div class="lesson-bottom">
+      <div class="mission">
         <a>Start Lesson</a>
       </div>
     </div>
@@ -26,7 +26,7 @@ export default () => `
         <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
         <i id="time" class="far fa-clock"></i>
       </div>
-      <div class="lesson-bottom">
+      <div class="do">
         <a>Start Lesson</a>
       </div>
     </div>
@@ -36,7 +36,7 @@ export default () => `
         <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
         <i id="time" class="far fa-clock"></i>
       </div>
-      <div class="lesson-bottom">
+      <div class="who">
         <a>Start Lesson</a>
       </div>
     </div>
@@ -46,7 +46,7 @@ export default () => `
         <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
         <i id="time" class="far fa-clock"></i>
       </div>
-      <div class="lesson-bottom">
+      <div class="volunteering">
         <a>Start Lesson</a>
       </div>
     </div>
@@ -56,7 +56,7 @@ export default () => `
       <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
       <i id="time" class="far fa-clock"></i>
     </div>
-    <div class="lesson-bottom">
+    <div class="policy">
       <a>Start Lesson</a>
     </div>
   </div>
@@ -66,7 +66,7 @@ export default () => `
     <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
     <i id="time" class="far fa-clock"></i>
   </div>
-  <div class="lesson-bottom">
+  <div class="dv">
     <a>Start Lesson</a>
   </div>
 </div>
