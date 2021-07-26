@@ -53,7 +53,7 @@ function listenForSignup(st) {
         //create user in firebase
         auth
           .createUserWithEmailAndPassword(email, password)
-          .then(() => {
+          .then((response) => {
             //add user to state and database
             addUserToStateAndDB(email);
             render(state.Welcome);
