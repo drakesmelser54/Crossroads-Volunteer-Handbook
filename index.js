@@ -34,13 +34,11 @@ function eventListenerBundler(st) {
   listenForSignup(st);
   storyComplete(st);
   logoutListener(st);
-  turnGreen(st);
 }
 
 //----------signup-form-------------/
 function listenForSignup(st) {
   if (st.view === "Signup") {
-    // eslint-disable-next-line prettier/prettier
     document
       .querySelector("#signup-form")
       .addEventListener("submit", (event) => {
@@ -55,7 +53,7 @@ function listenForSignup(st) {
         //create user in firebase
         auth
           .createUserWithEmailAndPassword(email, password)
-          .then((response) => {
+          .then(() => {
             //add user to state and database
             addUserToStateAndDB(email);
             render(state.Welcome);
@@ -186,33 +184,30 @@ function storyDbUpdate()
 }
 
 
-function turnGreen(st) {
- if (st.view === "Handbook")
-  return db
-    .collection("users")
-    .get()
-    .then(snapshot => snapshot.docs.forEach(doc => {
-      if (state.User.email === doc.data()) {
-        let id = doc.id;
-        db.collection("users")
-        .doc(id.lessons)
-        .forEach(lesson => {
-          if (lesson) return
-          document.querySelector(`#${lesson}`).className = "is-completed"
-        })
-      }
-    })
-    )}
+// function turnGreen(st) {
+//  if (st.view === "Handbook")
+//   return db
+//     .collection("users")
+//     .get()
+//     .then(snapshot => snapshot.docs.forEach(doc => {
+//       if (state.User.email === doc.data()) {
+//         let id = doc.id;
+//         db.collection("users")
+//         .doc(id.lessons)
+//         .forEach(lesson => {
+//           if (lesson) return
+//           document.querySelector(`#${lesson}`).className = "is-completed"
+//         })
+//       }
+//     })
+//     )}
 
-      // snapshot =>
-      //   snapshot.docs.forEach(doc => {
-      //     if (state.User.email === doc.data()) {
-      //       let id = doc.id;
-      //       db.collection("users")
-      //       .doc(id)
-      //       .forEach(lesson => {
-      //         if (lesson) return
-      //         document.querySelector(`#${lesson}`).className = "is-completed"
+// Object.entries(state.User.lessons).forEach(([key, value]) => {
+//   if (value) {
+//     const $lesson = document.querySelector(`#[data-lesson="${key}"]`)
+//     $lesson.className = 'is-completed'
+//   }
+// })
 
 
 
