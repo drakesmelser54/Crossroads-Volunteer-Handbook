@@ -32,7 +32,7 @@ function render(st = state.Home) {
 function eventListenerBundler(st) {
   listenForLogin(st);
   listenForSignup(st);
-  storyComplete(st);
+  storyComplete();
   logoutListener(st);
 }
 
