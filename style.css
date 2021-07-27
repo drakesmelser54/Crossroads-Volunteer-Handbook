@@ -260,7 +260,13 @@ select {
   height: 60%;
 }
 
-.lesson-bottom {
+#story,
+#mission,
+#what,
+#who,
+#volunteering,
+#policy,
+#domestic {
   height: 40%;
   width: 100%;
   background-color: #6e3a84;
@@ -271,6 +277,16 @@ select {
   justify-content: center;
 }
 
+.is-completed {
+  height: 40%;
+  width: 100%;
+  background-color: green;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 #time {
   font-size: small;
 }

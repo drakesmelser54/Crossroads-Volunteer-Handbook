@@ -4,7 +4,6 @@ import * as state from "./store";
 import Navigo from "navigo";
 import { capitalize } from "lodash";
 import { auth, db } from "./firebase";
-import { doc } from "prettier";
 
 //-----------------------------------router fxn-----------------------------------------------------
 const router = new Navigo(window.location.origin);
@@ -53,7 +52,7 @@ function listenForSignup(st) {
         //create user in firebase
         auth
           .createUserWithEmailAndPassword(email, password)
-          .then((response) => {
+          .then(() => {
             //add user to state and database
             addUserToStateAndDB(email, password);
             render(state.Welcome);
@@ -64,15 +63,17 @@ function listenForSignup(st) {
 }
 
 //--------add user to state and db-----------/
-function addUserToStateAndDB(email, password) {
+function addUserToStateAndDB(email) {
   state.User.email = email;
   state.User.loggedIn = true;
-  state.User.story = false;
+  state.User.lessons.story = false;
 
   db.collection("users").add({
     email: email,
     loggedIn: true,
-    story: false
+    lessons: {
+      story: false
+    }
   });
 }
 
@@ -163,23 +164,10 @@ function logoutListener(user) {
 function resetUserInState() {
   state.User.email = "";
   state.User.loggedIn = false;
-  state.User.story = false;
+  state.User.lessons.story = false;
 }
 
 
-//--------turn completed lessons green------------------//
-function greenCompletion(st) {
-  if (st.view === "Handbook") {
-    //map through user object in state and find lessons that are labeled true (completed)
-    state.User.forEach(lesson => {
-      if (true === lesson) {
-    //if true, change css to change lesson box from purple to green for that lesson
-       //set completed lessons to the html id's of the appropriate lesson boxes
-       //change the css for those boxes to green
-      }
-    });
-  }
-}
 //----------------Our Story Lesson Completion----------------//
 //-main complete fxn----//
 function storyComplete(st) {
@@ -189,8 +177,7 @@ function storyComplete(st) {
       .addEventListener("click", (event) => {
         event.preventDefault();
         storyDbUpdate(st);
-        state.User.story = true;
-        turnGreen(st);
+        state.User.lessons.story = true;
       })
   }
 }
@@ -209,9 +196,17 @@ function storyDbUpdate()
           db.collection("users")
             .doc(id)
             .update({
-              story: true
+              lessons: { story: true }
             });
         }
       })
     );
 }
+
+
+//turn green//
+Object.keys(state.User.lessons).forEach(lesson => {
+  if (!state.User.lessons[lesson]) return;
+  const $lesson = document.getElementById(`[data-lesson="${lesson}"]`)
+  $lesson.className = "is-completed";
+})

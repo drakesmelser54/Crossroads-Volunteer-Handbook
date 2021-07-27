@@ -1,5 +1,17 @@
 export default {
   email: "",
   loggedIn: false,
-  story: false
+  lessons: {
+    story: false,
+    mission: false,
+    what: false,
+    who: false,
+    volunteering: false,
+    policy: false,
+    domestic: false,
+
+
+
+
+  }
 };
