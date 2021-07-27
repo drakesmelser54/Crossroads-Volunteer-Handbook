@@ -67,22 +67,12 @@ function listenForSignup(st) {
 function addUserToStateAndDB(email) {
   state.User.email = email;
   state.User.loggedIn = true;
-<<<<<<< HEAD
   state.User.lessons[0] = false;
-=======
-  state.User.lessons.story = false;
->>>>>>> 45f9bd7
 
   db.collection("users").add({
     email: email,
     loggedIn: true,
-<<<<<<< HEAD
     lessons: { story: false}
-=======
-    lessons: {
-      story: false
-    }
->>>>>>> 45f9bd7
   });
 }
 
@@ -155,16 +145,9 @@ function logoutListener(user) {
 function resetUserInState() {
   state.User.email = "";
   state.User.loggedIn = false;
-<<<<<<< HEAD
   state.User.lessons[0] = false;
 }
 
-=======
-  state.User.lessons.story = false;
-}
-
-
->>>>>>> 45f9bd7
 //----------------Our Story Lesson Completion----------------//
 //-main complete fxn----//
 function storyComplete(st) {
@@ -173,15 +156,10 @@ function storyComplete(st) {
       .querySelector("#next-button")
       .addEventListener("click", (event) => {
         event.preventDefault();
-<<<<<<< HEAD
         storyDbUpdate()
         .then(() => {
         state.User.lessons[0] = true;
         })
-=======
-        storyDbUpdate(st);
-        state.User.lessons.story = true;
->>>>>>> 45f9bd7
       })
   }
 }
@@ -206,63 +184,9 @@ function storyDbUpdate()
 }
 
 
-<<<<<<< HEAD
-// function turnGreen(st) {
-//  if (st.view === "Handbook")
-//   return db
-//     .collection("users")
-//     .get()
-//     .then(snapshot => snapshot.docs.forEach(doc => {
-//       if (state.User.email === doc.data()) {
-//         let id = doc.id;
-//         db.collection("users")
-//         .doc(id.lessons)
-//         .forEach(lesson => {
-//           if (lesson) return
-//           document.querySelector(`#${lesson}`).className = "is-completed"
-//         })
-//       }
-//     })
-//     )}
-
-// Object.entries(state.User.lessons).forEach(([key, value]) => {
-//   if (value) {
-//     const $lesson = document.querySelector(`#[data-lesson="${key}"]`)
-//     $lesson.className = 'is-completed'
-//   }
-// })
-
-
-
-//----------------incomplete functions---------------------------------------------//
-//----------------Our Story Lesson Completion----------------//
-//when a user clicks next after finishing a lesson module, mark it as complete in state and db and show user that they have completed said module with a graphic
-
-
-//---------log-out in Db-------//
-
-//fxn not working properly, not logging people out of the db, doesn't really matter for this project//
-//function logOutUserInDb(email) {
-//   if (state.User.loggedIn) {
-//     db.collection("users")
-//       .get()
-//       .then(snapshot =>
-//         snapshot.docs.forEach(doc => {
-//           if (email === doc.data().email) {
-//             let id = doc.id;
-//             db.collection("users")
-//               .doc(id)
-//               .update({ loggedIn: false });
-//           }
-//         })
-//       );
-//   }
-// }
-=======
 //turn green//
 Object.keys(state.User.lessons).forEach(lesson => {
   if (!state.User.lessons[lesson]) return;
   const $lesson = document.getElementById(`[data-lesson="${lesson}"]`)
   $lesson.className = "is-completed";
 })
->>>>>>> 45f9bd7
