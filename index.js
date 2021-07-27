@@ -53,7 +53,7 @@ function listenForSignup(st) {
         //create user in firebase
         auth
           .createUserWithEmailAndPassword(email, password)
-          .then((response) => {
+          .then(() => {
             //add user to state and database
             addUserToStateAndDB(email);
             render(state.Welcome);
@@ -67,12 +67,22 @@ function listenForSignup(st) {
 function addUserToStateAndDB(email) {
   state.User.email = email;
   state.User.loggedIn = true;
+<<<<<<< HEAD
   state.User.lessons[0] = false;
+=======
+  state.User.lessons.story = false;
+>>>>>>> 45f9bd7
 
   db.collection("users").add({
     email: email,
     loggedIn: true,
+<<<<<<< HEAD
     lessons: { story: false}
+=======
+    lessons: {
+      story: false
+    }
+>>>>>>> 45f9bd7
   });
 }
 
@@ -145,9 +155,16 @@ function logoutListener(user) {
 function resetUserInState() {
   state.User.email = "";
   state.User.loggedIn = false;
+<<<<<<< HEAD
   state.User.lessons[0] = false;
 }
 
+=======
+  state.User.lessons.story = false;
+}
+
+
+>>>>>>> 45f9bd7
 //----------------Our Story Lesson Completion----------------//
 //-main complete fxn----//
 function storyComplete(st) {
@@ -156,10 +173,15 @@ function storyComplete(st) {
       .querySelector("#next-button")
       .addEventListener("click", (event) => {
         event.preventDefault();
+<<<<<<< HEAD
         storyDbUpdate()
         .then(() => {
         state.User.lessons[0] = true;
         })
+=======
+        storyDbUpdate(st);
+        state.User.lessons.story = true;
+>>>>>>> 45f9bd7
       })
   }
 }
@@ -184,6 +206,7 @@ function storyDbUpdate()
 }
 
 
+<<<<<<< HEAD
 // function turnGreen(st) {
 //  if (st.view === "Handbook")
 //   return db
@@ -235,3 +258,11 @@ function storyDbUpdate()
 //       );
 //   }
 // }
+=======
+//turn green//
+Object.keys(state.User.lessons).forEach(lesson => {
+  if (!state.User.lessons[lesson]) return;
+  const $lesson = document.getElementById(`[data-lesson="${lesson}"]`)
+  $lesson.className = "is-completed";
+})
+>>>>>>> 45f9bd7
