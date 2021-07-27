@@ -260,17 +260,7 @@ select {
   height: 60%;
 }
 
-<<<<<<< HEAD
 .story, .mission, .do, .who, .volunteering, .policy, .dv {
-=======
-#story,
-#mission,
-#what,
-#who,
-#volunteering,
-#policy,
-#domestic {
->>>>>>> 45f9bd7
   height: 40%;
   width: 100%;
   background-color: #6e3a84;
@@ -291,10 +281,6 @@ select {
   align-items: center;
   justify-content: center;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 45f9bd7
 #time {
   font-size: small;
 }
