@@ -32,6 +32,7 @@ function render(st = state.Home) {
 function eventListenerBundler(st) {
   listenForLogin(st);
   listenForSignup(st);
+  turnGreen(st);
   storyComplete(st);
   logoutListener(st);
 }
@@ -117,6 +118,7 @@ function getUserFromDb(email) {
           state.User.email = user.email;
           state.User.loggedIn = true;
           state.User.lessons.story = user.lessons.story
+          turnGreen();
         }
       })
     );
@@ -146,7 +148,7 @@ function logoutListener(user) {
 function resetUserInState() {
   state.User.email = "";
   state.User.loggedIn = false;
-  state.User.lessons[0] = false;
+  state.User.lessons.story = false;
 }
 
 //----------------Our Story Lesson Completion----------------//
@@ -160,6 +162,8 @@ function storyComplete(st) {
         storyDbUpdate()
         .then(() => {
         state.User.lessons.story = true;
+        turnGreen()
+        console.log("hello");
         })
       })
   }
@@ -186,8 +190,11 @@ function storyDbUpdate()
 
 
 //turn green//
-Object.keys(state.User.lessons).forEach(lesson => {
-  if (!state.User.lessons[lesson]) return;
-  let $lesson = document.querySelector(`[data-lesson="${lesson}"]`)
-  $lesson.className = "is-completed";
-})
+function turnGreen () {
+  Object.keys(state.User.lessons).forEach(lesson => {
+    if (!state.User.lessons[lesson]) return;
+    let $lesson = document.querySelector(`[data-lesson="${lesson}"]`)
+    $lesson.className = "is-completed";
+  })
+}
+
