@@ -6,11 +6,7 @@ export default () => `
           <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
           <i id="time" class="far fa-clock"></i>
       </div>
-<<<<<<< HEAD
-      <div id="story" class="story">
-=======
-      <div id="story">
->>>>>>> 45f9bd7
+      <div class="lesson-bottom" data-lesson="story">
         <a href="/Story" data-navigo>Start Lesson</a>
       </div>
     </div>
@@ -20,11 +16,7 @@ export default () => `
         <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
         <i id="time" class="far fa-clock"></i>
       </div>
-<<<<<<< HEAD
-      <div class="mission">
-=======
-      <div id="mission">
->>>>>>> 45f9bd7
+      <div class="lesson-bottom" data-lesson="mission">
         <a>Start Lesson</a>
       </div>
     </div>
@@ -34,11 +26,7 @@ export default () => `
         <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
         <i id="time" class="far fa-clock"></i>
       </div>
-<<<<<<< HEAD
-      <div class="do">
-=======
-      <div id="what">
->>>>>>> 45f9bd7
+      <div class="lesson-bottom" data-lesson="do">
         <a>Start Lesson</a>
       </div>
     </div>
@@ -48,11 +36,7 @@ export default () => `
         <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
         <i id="time" class="far fa-clock"></i>
       </div>
-<<<<<<< HEAD
-      <div class="who">
-=======
-      <div id="who">
->>>>>>> 45f9bd7
+      <div class="lesson-bottom" data-lesson="who">
         <a>Start Lesson</a>
       </div>
     </div>
@@ -62,11 +46,7 @@ export default () => `
         <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
         <i id="time" class="far fa-clock"></i>
       </div>
-<<<<<<< HEAD
-      <div class="volunteering">
-=======
-      <div id="volunteering">
->>>>>>> 45f9bd7
+      <div class="lesson-bottom" data-lesson="volunteering">
         <a>Start Lesson</a>
       </div>
     </div>
@@ -76,11 +56,7 @@ export default () => `
       <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
       <i id="time" class="far fa-clock"></i>
     </div>
-<<<<<<< HEAD
-    <div class="policy">
-=======
-    <div id="policy">
->>>>>>> 45f9bd7
+    <div class="lesson-bottom" data-lesson="policy">
       <a>Start Lesson</a>
     </div>
   </div>
@@ -90,11 +66,7 @@ export default () => `
     <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
     <i id="time" class="far fa-clock"></i>
   </div>
-<<<<<<< HEAD
-  <div class="dv">
-=======
-  <div id="domestic">
->>>>>>> 45f9bd7
+  <div class="lesson-bottom" data-lesson="dv">
     <a>Start Lesson</a>
   </div>
 </div>

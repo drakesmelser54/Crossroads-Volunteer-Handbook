@@ -260,7 +260,7 @@ select {
   height: 60%;
 }
 
-.story, .mission, .do, .who, .volunteering, .policy, .dv {
+.lesson-bottom {
   height: 40%;
   width: 100%;
   background-color: #6e3a84;
