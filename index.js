@@ -41,6 +41,7 @@ function eventListenerBundler(st) {
   listenForLogin(st);
   listenForSignup(st);
   lessonComplete(st, "story");
+  lessonComplete(st, "mission");
   logoutListener(st);
 }
 

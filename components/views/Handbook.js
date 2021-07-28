@@ -17,7 +17,7 @@ export default () => `
         <i id="time" class="far fa-clock"></i>
       </div>
       <div class="lesson-bottom" data-lesson="mission">
-        <a>Start Lesson</a>
+        <a href="/Mission" data-navigo>Start Lesson</a>
       </div>
     </div>
     <div class="lesson-boxes">
