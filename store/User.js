@@ -2,6 +2,7 @@ export default {
   email: "",
   loggedIn: false,
   lessons: {
-    story: false
+    story: false,
+    mission: false
   }
 };

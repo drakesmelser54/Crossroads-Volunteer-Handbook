@@ -9,6 +9,14 @@ import { auth, db } from "./firebase";
 //-----------------------------------router fxn-----------------------------------------------------
 const router = new Navigo(window.location.origin);
 
+router.hooks({
+  before: (done) => {
+    /** Mark each completed user lesson as completed */
+    Object.keys(state.User.lessons).forEach(markLessonCompleted)
+    done()
+  }
+})
+
 router
   .on({
     ":page": (params) => render(state[capitalize(params.page)]),
@@ -32,8 +40,8 @@ function render(st = state.Home) {
 function eventListenerBundler(st) {
   listenForLogin(st);
   listenForSignup(st);
-  turnGreen(st);
-  storyComplete(st);
+  lessonComplete(st, "story");
+  lessonComplete(st, "mission");
   logoutListener(st);
 }
 
@@ -153,24 +161,22 @@ function resetUserInState() {
 
 //----------------Our Story Lesson Completion----------------//
 //-main complete fxn----//
-function storyComplete(st) {
-  if (st.view === "Story") {
+function lessonComplete(st, lessonName) {
+  if (st.view.toLowerCase() === lessonName) {
     document
       .querySelector("#next-button")
       .addEventListener("click", (event) => {
         event.preventDefault();
-        storyDbUpdate()
+        lessonDbUpdate(lessonName)
         .then(() => {
-        state.User.lessons.story = true;
-        turnGreen()
-        console.log("hello");
+        state.User.lessons[lessonName] = true;
+        markLessonCompleted(lessonName)
         })
       })
   }
 }
 
-function storyDbUpdate()
- {
+function lessonDbUpdate(lessonName) {
   return db
     .collection("users")
     .get()
@@ -181,20 +187,18 @@ function storyDbUpdate()
           db.collection("users")
             .doc(id)
             .update({
-              lessons: { story: true }
+              lessons: { [lessonName]: true }
             });
         }
       })
     );
 }
 
-
-//turn green//
-function turnGreen () {
-  Object.keys(state.User.lessons).forEach(lesson => {
-    if (!state.User.lessons[lesson]) return;
-    let $lesson = document.querySelector(`[data-lesson="${lesson}"]`)
-    $lesson.className = "is-completed";
-  })
+/**
+ * Turn all the things green
+ */
+function markLessonCompleted(lesson) {
+  if (!state.User.lessons[lesson]) return;
+  let $lesson = document.querySelector(`[data-lesson="${lesson}"]`)
+  $lesson.className = "is-completed";
 }
-
