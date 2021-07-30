@@ -13,6 +13,7 @@ const router = new Navigo(window.location.origin);
 router.hooks({
   after(params) {
     if(params.page === 'Handbook') {
+      progress()
       markAllLessonsComplete()
     }
   }
@@ -126,7 +127,7 @@ function getUserFromDb(email) {
           let user = doc.data();
           state.User.email = user.email;
           state.User.loggedIn = true;
-          state.User.lessons.story = user.lessons.story
+          state.User.lessons = user.lessons
         }
       })
     );
@@ -172,6 +173,7 @@ function lessonComplete(st, lessonName) {
         .then(() => {
           console.log(lessonName, state.User.lessons)
           state.User.lessons[lessonName] = true;
+          progress()
           markAllLessonsComplete()
         })
       })
@@ -196,9 +198,9 @@ function lessonDbUpdate(lessonName) {
     );
 }
 
-/**
- * Turn all the things green
- */
+
+//----- Turn all the things green
+
 function markLessonCompleted(lesson) {
   if (!state.User.lessons[lesson]) return;
   let $lesson = document.querySelector(`[data-lesson="${lesson}"]`)
@@ -207,4 +209,22 @@ function markLessonCompleted(lesson) {
 
 function markAllLessonsComplete() {
   Object.keys(state.User.lessons).forEach(markLessonCompleted)
+}
+
+
+//----progress-bar------/
+function progress() {
+  // turn the user lessons into an array of booleans,
+// in this case [true, false, true]
+let totalLessonValues = Object.values(state.User.lessons)
+// get an array of the true values from the lessons object, in this case [true, true]
+let finishedLessons = totalLessonValues.filter(Boolean)
+// finally, get the percentage of lessons completed
+let percentLessonsCompleted = finishedLessons.length / totalLessonValues.length
+
+// turn our percentage into a number between 1-100
+let scroll = percentLessonsCompleted * 100
+
+let progress = document.querySelector('.progress')
+progress.style.setProperty('--scroll', scroll + '%');
 }
