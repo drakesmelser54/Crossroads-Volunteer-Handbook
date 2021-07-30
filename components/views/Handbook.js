@@ -29,7 +29,7 @@ export default () => `
         <i id="time" class="far fa-clock"></i>
       </div>
       <div class="lesson-bottom" data-lesson="do">
-        <a>Start Lesson</a>
+        <a href="/Do" data-navigo>Start Lesson</a>
       </div>
     </div>
     <div class="lesson-boxes">
@@ -39,7 +39,7 @@ export default () => `
         <i id="time" class="far fa-clock"></i>
       </div>
       <div class="lesson-bottom" data-lesson="who">
-        <a>Start Lesson</a>
+        <a href="/Who" data-navigo>Start Lesson</a>
       </div>
     </div>
     <div class="lesson-boxes">
@@ -49,7 +49,7 @@ export default () => `
         <i id="time" class="far fa-clock"></i>
       </div>
       <div class="lesson-bottom" data-lesson="volunteering">
-        <a>Start Lesson</a>
+        <a href="/Volunteering" data-navigo>Start Lesson</a>
       </div>
     </div>
     <div class="lesson-boxes">
@@ -59,7 +59,7 @@ export default () => `
       <i id="time" class="far fa-clock"></i>
     </div>
     <div class="lesson-bottom" data-lesson="policy">
-      <a>Start Lesson</a>
+      <a href="Policy" data-navigo>Start Lesson</a>
     </div>
   </div>
   <div class="lesson-boxes">
@@ -69,7 +69,7 @@ export default () => `
     <i id="time" class="far fa-clock"></i>
   </div>
   <div class="lesson-bottom" data-lesson="dv">
-    <a>Start Lesson</a>
+    <a href="Dv" data-navigo>Start Lesson</a>
   </div>
 </div>
 </div>

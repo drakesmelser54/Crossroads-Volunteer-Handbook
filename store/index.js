@@ -6,3 +6,8 @@ export { default as Handbook } from "./Handbook";
 export { default as Story } from "./Story";
 export { default as Mission } from "./Mission";
 export { default as User } from "./User";
+export { default as Do } from "./Do";
+export { default as Who } from "./Who";
+export { default as Volunteering } from "./Volunteering";
+export { default as Policy } from "./Policy";
+export { default as Dv } from "./Dv";

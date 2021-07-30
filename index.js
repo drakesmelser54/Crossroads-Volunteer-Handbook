@@ -43,7 +43,13 @@ function render(st = state.Home) {
 function eventListenerBundler(st) {
   listenForLogin(st);
   listenForSignup(st);
-  lessonComplete(st, "story", "mission", "do", "who", "volunteering", "policy", "dv");
+  lessonComplete(st, "story");
+  lessonComplete(st, "mission");
+  lessonComplete(st, "do");
+  lessonComplete(st, "who");
+  lessonComplete(st, "volunteering");
+  lessonComplete(st, "policy");
+  lessonComplete(st, "dv");
   logoutListener(st);
 }
 

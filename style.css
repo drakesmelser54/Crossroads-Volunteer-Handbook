@@ -198,8 +198,8 @@ select {
   background: linear-gradient(to right, green var(--scroll), lightgray 0);
   background-repeat: no-repeat;
   border-radius: 25px;
-  width: 60%;
-  height: 20px;
+  width: 70%;
+  height: 15px;
   z-index: 1;
   margin-bottom: 5vh;
 }
