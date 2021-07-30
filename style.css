@@ -198,9 +198,10 @@ select {
   background: linear-gradient(to right, green var(--scroll), lightgray 0);
   background-repeat: no-repeat;
   border-radius: 25px;
-  width: 70%;
+  width: 60%;
   height: 20px;
   z-index: 1;
+  margin-bottom: 5vh;
 }
 .lesson-path {
   display: flex;

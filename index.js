@@ -15,6 +15,7 @@ router.hooks({
     if(params.page === 'Handbook') {
       progress()
       markAllLessonsComplete()
+      console.log(state.User);
     }
   }
 })
@@ -42,8 +43,7 @@ function render(st = state.Home) {
 function eventListenerBundler(st) {
   listenForLogin(st);
   listenForSignup(st);
-  lessonComplete(st, "story");
-  lessonComplete(st, "mission");
+  lessonComplete(st, "story", "mission", "do", "who", "volunteering", "policy", "dv");
   logoutListener(st);
 }
 
@@ -83,7 +83,15 @@ function addUserToStateAndDB(email) {
   db.collection("users").add({
     email: email,
     loggedIn: true,
-    lessons: { story: false}
+    lessons: {
+      story: false,
+      mission: false,
+      do: false,
+      who: false,
+      volunteering: false,
+      policy: false,
+      dv: false
+    }
   });
 }
 
@@ -128,6 +136,7 @@ function getUserFromDb(email) {
           state.User.email = user.email;
           state.User.loggedIn = true;
           state.User.lessons = user.lessons
+          console.log(state.User);
         }
       })
     );
@@ -159,6 +168,10 @@ function resetUserInState() {
   state.User.loggedIn = false;
   state.User.lessons.story = false;
   state.User.lessons.mission = false;
+  state.User.lessons.do = false;
+  state.User.lessons.who = false;
+  state.User.lessons.policy = false;
+  state.User.lessons.dv = false;
 }
 
 //----------------Our Story Lesson Completion----------------//
@@ -227,4 +240,13 @@ let scroll = percentLessonsCompleted * 100
 
 let progress = document.querySelector('.progress')
 progress.style.setProperty('--scroll', scroll + '%');
+
+progressHeader(percentLessonsCompleted);
+console.log(state.User);
+
+}
+
+function progressHeader (percentLessonsCompleted) {
+  document.getElementById('progress-header')
+  .innerHTML = `${Math.round(percentLessonsCompleted * 100)}% of Handbook Complete. Keep it up!`
 }

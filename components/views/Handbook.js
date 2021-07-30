@@ -1,6 +1,7 @@
 export default () => `
   <div class="lesson-path">
-    <div class="progress"></div>
+      <h2 id="progress-header">Hello</h2>
+      <div class="progress"></div>
     <div class="lesson-boxes">
       <div class="lesson-top">
           <h2>Our Story</h2>
