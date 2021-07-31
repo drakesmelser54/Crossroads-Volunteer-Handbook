@@ -7,7 +7,7 @@ export default () => `
   </div>
   <form class="contact-form" action="https://formspree.io/f/xyylnwpn" method="POST">
     <label for="fname">Name</label>
-    <input type="text" id="fname" name="name" placeholder="Your name..">
+    <input type="text" id="fname" name="name" placeholder="Your name">
     <label for="message">Feedback</label>
     <textarea name="message" placeholder="How was the Handbook?" max-length="200"></textarea>
     <label for="message">Suggestions</label>
