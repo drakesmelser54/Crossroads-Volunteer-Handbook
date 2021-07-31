@@ -1,6 +1,7 @@
 export default () => `
 <section class="home-jumbotron">
 <div class="contact-container">
+  <h1 id="contact-header">Contact Us</h1>
   <form class="contact-form" action="https://formspree.io/f/mvodware" method="POST">
     <label for="fname">Name</label>
     <input type="text" id="fname" name="name" placeholder="Your name..">

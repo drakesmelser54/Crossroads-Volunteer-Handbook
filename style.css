@@ -24,7 +24,6 @@ p {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-
 /*nav-bar--------------------------------------*/
 .nav-bar {
   width: 100%;
@@ -71,12 +70,21 @@ p {
 /*--------contact form----------*/
 .contact-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70vh;
-  width: 30vw;
+  height: 80vh;
+  width: 40vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 4px solid #b492c4;
+  margin-bottom: 5vh;
 }
 
+#contact-header {
+  border-bottom: 1px solid #b492c4;
+  padding-bottom: 2vh;
+}
 .contact-form {
   display: flex;
   justify-content: space-evenly;
@@ -112,7 +120,8 @@ p {
   border: 4px solid #6e3a84;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: white;
   opacity: 1; /* Firefox */
 }
@@ -140,7 +149,7 @@ p {
   align-items: center;
   z-index: 5;
   font-size: large;
-  position:fixed;
+  position: fixed;
 }
 
 .home-container > h1 {
@@ -233,7 +242,6 @@ select {
   width: 200px;
   font-family: "Quicksand", sans-serif;
 }
-
 
 /*Form Containers*/
 .forms > input {
@@ -406,6 +414,83 @@ select {
   color: black;
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
 }
+
+/*----------completion form----------------*/
+.completion-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 50vw;
+  font-size: smaller;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  border: 4px solid #b492c4;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  margin-top: 5%;
+  padding: 10px;
+}
+
+#completion-submit {
+  margin: 3vh auto;
+}
+
+.completion-text {
+  text-align: center;
+  width: 50%;
+  border-bottom: 1px solid #b492c4;
+  margin-bottom: 3vh;
+}
+
+.completion-text > p {
+  font-family: "Quicksand", sans-serif;
+}
+
+/*star rating*/
+#star-description {
+  text-align: left;
+  line-height: 5pt;
+}
+.star-rating .thanks-msg {
+  display: none;
+  font-size: 20px;
+
+  color: #4caf50;
+  background-color: rgba(76, 175, 80, 0.1411764705882353);
+  padding: 8px 20px;
+  border-left: 3px solid #4caf50;
+  border-radius: 20px;
+}
+.star-rating input {
+  display: none;
+}
+.star-rating {
+  display: table;
+  width: auto;
+  border: 4px solid #6e3a84;
+}
+.star-rating label {
+  padding: 10px;
+  float: right;
+  font-size: 15px;
+  color: #eee;
+}
+.star-rating input:not(:checked) ~ label:hover,
+.star-rating input:not(:checked) ~ label:hover ~ label {
+  color: #ffc107;
+}
+.star-rating input:checked ~ label {
+  color: #ffc107;
+}
+.star-rating form .rating-reaction:before {
+  width: 100%;
+  float: left;
+  color: #ffc107;
+}
+
+
 /*footer------------*/
 .footer {
   height: 20vh;

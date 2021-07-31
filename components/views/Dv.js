@@ -24,6 +24,6 @@ export default () => `
     <p>On July 1, 2016, the Women’s Center of RI merged into the Domestic Violence Program of Crossroads RI. As domestic violence is one of the leading causes of homelessness for women and children, both organizations strive to empower vulnerable individuals and families to overcome homelessness and live, safe, self-sufficient lives free of violence. The merger has enabled us to better address the connection between domestic violence and homelessness.
     </p>
   </div>
-  <a id="next-button" href="/Handbook" data-navigo>Next Lesson</a>
+  <a id="next-button" href="/Completion" data-navigo>Next Lesson</a>
 </div>
 `;
