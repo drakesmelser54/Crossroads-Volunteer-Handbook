@@ -386,6 +386,10 @@ select {
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
 }
 
+.story-images {
+  height: auto;
+  width: 30vw;
+}
 #previous-lesson {
   display: inline-flex;
   align-items: baseline;

@@ -9,6 +9,8 @@ export default () => `
   </div>
   <h2 id="story-headers">1894</h2>
   </h2>
+  <img class="story-images" src="https://d1b4xsuwkkd7wf.cloudfront.net/banners/_1200x630_crop_center-center_82_none/img64.jpg?mtime=1572447528" alt="travellers aid photo" />
+  </div>
   <div class="stories">
     <p>We were founded as Travelers Aid of Rhode Island The goal was to assist people who came to Providence in search of work, many of whom were young women. Since then, we have evolved to meet the needs of the most vulnerable people in our state.
     </p>

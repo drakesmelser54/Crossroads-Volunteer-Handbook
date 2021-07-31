@@ -15,7 +15,7 @@ export default () => `
     <label for="rating">Rating</label>
     <div id="star-description">
       <p><i>*1 Star = helpful<i></p>
-      <p><i>*5 Stars = extremely helpful<i></p>
+      <p><i>*5 Stars = extremely helpful</i></p>
     </div>
     <div class="star-rating">
       <div class="star-input">

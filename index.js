@@ -32,7 +32,6 @@ function render(st = state.Home) {
   document.querySelector("#root").innerHTML = `
   ${Nav(state.Links)}
   ${Main(st)}
-  ${Footer()}
   `;
 
   router.updatePageLinks();
