@@ -1,5 +1,7 @@
 export { default as Home } from "./Home";
 export { default as Login } from "./Login";
+export { default as Contact } from "./Contact";
+export { default as Completion } from "./Completion";
 export { default as Signup } from "./Signup";
 export { default as Welcome } from "./Welcome";
 export { default as Handbook } from "./Handbook";

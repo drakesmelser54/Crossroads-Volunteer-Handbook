@@ -41,6 +41,7 @@ function render(st = state.Home) {
 
 //---------------------------------Event Listener Bundler-------------------------------------------
 function eventListenerBundler(st) {
+
   listenForLogin(st);
   listenForSignup(st);
   lessonComplete(st, "story");

@@ -17,41 +17,111 @@ h3 {
   font-family: "Quicksand", sans-serif;
 }
 
+a {
+  font-family: "Quicksand", sans-serif;
+}
 p {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-#Nav-Banner {
-  text-decoration: none;
-  color: black;
-  font-size: 30px;
-  padding-left: 15px;
-}
+
+/*nav-bar--------------------------------------*/
 .nav-bar {
   width: 100%;
-  height: 8vh;
+  height: 10vh;
   background-color: white;
   display: inline-flex;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: space-around;
   position: fixed;
   z-index: 10;
   margin: 0px;
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
 }
 
-.nav-left {
-  display: inline-flex;
-  align-items: flex-end;
-  justify-content: space-evenly;
+/*nav buttons*/
+.nav-btns,
+#log-out {
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  padding: 0 5px;
+  font-size: 18px;
+  text-decoration: none;
 }
 
+.nav-btns:hover,
+.nav-btns:focus,
+#log-out:hover,
+#log-out:focus {
+  background-color: #b492c4;
+}
+
+#home-btn {
+  width: auto;
+}
+
+#logo {
+  height: 8vh;
+  width: auto;
+  padding-right: 20vw;
+}
+
+/*--------contact form----------*/
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 30vw;
+}
+
+.contact-form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+}
+
+.contact-form > label {
+  font-size: large;
+}
+
+.contact-form > input {
+  margin-bottom: 5vh;
+  margin-top: 2vh;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+}
+
+.contact-form > textarea {
+  margin-bottom: 5vh;
+  margin-top: 2vh;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  border: 4px solid #6e3a84;
+}
+
+.contact-form > select {
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+  background-color: rgba(255, 255, 255, 0);
+  border: 4px solid #6e3a84;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
 /*home page----------------------*/
 .home-jumbotron {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("https://github.com/drakesmelser54/Crossroads-Volunteer-Handbook/blob/master/images/crossroads-building.jpeg?raw=true");
+    url("https://img.marinas.com/v2/90485f73e926a9cbc75ca2e4320770326dea30774c50df0f681db82967270dc3.jpg");
   background-size: cover;
-  height: 100vh;
+  height: 120vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -61,19 +131,25 @@ p {
 .home-container {
   height: 30vh;
   width: 20vw;
-  margin-bottom: 9%;
+  margin-bottom: 15%;
   display: flex;
   flex-direction: column;
   color: white;
   justify-content: space-evenly;
+  text-align: center;
   align-items: center;
   z-index: 5;
   font-size: large;
+  position:fixed;
 }
 
+.home-container > h1 {
+  border: 4px solid #b492c4;
+  padding: 10px;
+}
 /*homepage button styling*/
 #login-button {
-  border: 2px solid white;
+  border: 4px solid green;
   text-decoration: none;
   color: white;
   padding: 10px 20px;
@@ -81,16 +157,15 @@ p {
 }
 
 #signup-button {
-  font-family: "Raleway", Helvetica, sans-serif;
-  color: white;
-  padding: 10px 20px;
+  border: 4px solid #6e3a84;
   text-decoration: none;
+  color: white;
+  padding: 10px 16px;
   cursor: pointer;
 }
-
 /*Login and Signup Pages*/
 .login-signup-container {
-  height: 60vh;
+  height: 50vh;
   width: 20vw;
   display: flex;
   align-items: center;
@@ -98,6 +173,7 @@ p {
   justify-content: space-evenly;
   color: white;
   text-align: center;
+  margin-bottom: 8%;
 }
 
 .login-signup-container a {
@@ -114,7 +190,7 @@ input[type="text"] select {
   padding: 1vh 1vw;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 4px solid #6e3a84;
   background: transparent;
   color: white;
   box-sizing: border-box;
@@ -132,8 +208,9 @@ input[type="text"]::placeholder {
 
 input[type="submit"],
 select {
-  border: 1px solid white;
+  border: 1px solid green;
   background: transparent;
+  background-color: green;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
@@ -143,54 +220,34 @@ select {
   font-family: "Quicksand", sans-serif;
 }
 
-textarea,
+.forms > input[type="submit"],
 select {
-  padding: 2vh 2vw;
-  margin: 8px 0;
-  width: 80%;
-  height: 25%;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  text-align: center;
+  border: 1px solid green;
+  background: transparent;
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 10px 12px;
+  cursor: pointer;
+  width: 200px;
   font-family: "Quicksand", sans-serif;
 }
 
+
 /*Form Containers*/
-.forms {
-  padding: 10vh;
-  font-size: large;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
 .forms > input {
-  margin: 5vh;
   text-align: center;
   padding: 1vh 1vw;
   display: inline-block;
-  border: 1px solid #ccc;
   box-sizing: border-box;
-  font-family: "Raleway", Helvetica, sans-serif;
+  font-family: "Quicksand", sans-serif;
   text-align: center;
+  border: 4px solid #6e3a84;
 }
 
-.forms > textarea {
-  margin: 5vh;
-  width: 30vw;
-  height: 20vh;
-}
-
-.forms > h2 {
-  border-bottom: 1px white solid;
-  padding-bottom: 5vh;
-  margin: 5vh 5vw;
-}
-
-.forms > a {
-  color: white;
+.forms > input[type="submit"] {
+  border: 1px solid green;
 }
 
 /*------Handbook----------------*/
@@ -210,7 +267,7 @@ select {
   align-items: center;
   text-decoration: none;
   background-color: #eeeeee;
-  padding: 10vh 0;
+  padding: 15vh 0;
   height: 100%;
   width: 100%;
 }
