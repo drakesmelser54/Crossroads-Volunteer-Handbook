@@ -1,29 +1,28 @@
 export default () => `
 <div class="story-jumbotron">
-  <div class="upper-story-container">
-    <div id="previous-lesson">
-      <i class="fas fa-long-arrow-alt-left"></i>
+  <div class="upper-container">
+    <a href="/Story" data-navigo">
       <p>&nbsp&nbspPrevious Lesson</p>
-    </div>
-    <h2 id="history-header">Mission, Vision, & Values</h2>
+    </a>
+    <h1 id="history-header">Mission, Vision, & Values</h1>
   </div>
-  <h2 id="story-headers">1894</h2>
-  </h2>
-  <div class="stories">
-    <p>We were founded as Travelers Aid of Rhode Island The goal was to assist people who came to Providence in search of work, many of whom were young women. Since then, we have evolved to meet the needs of the most vulnerable people in our state.
-    </p>
+  <div class="mission-container">
+    <h2>Mission</h2>
+    <h3>The mission of Crossroads Rhode Island is to help homeless or at- risk individuals and families secure stable homes. They achieve this by engaging in our range of services including housing, basic needs, shelter, case management, referrals, and education and employment services.</h3>
   </div>
-  <h2 id="story-headers">2004</h2>
-  <div class="stories">
-    <p>In 2004, in order to reflect all the changes that we had made, we changed our name to Crossroads Rhode Island and moved from downtown Providence into the former YMCA building at 160 Broad Street.
-    Today we are the largest homeless services organization in Rhode Island. We have become much more than a place to sleep. In addition to shelter and basic needs,
-    <p>
+  <h2>Vision</h2>
+  <div class="vision-value-container">
+    <img src="https://cdn.pixabay.com/photo/2014/04/03/11/08/spectacles-311831__340.png" alt="glasses"  width="auto" height= "100"/>
+    <h4>The vision of Crossroads Rhode Island is to be a national leader in providing evidence-based practices to significantly reduce the number of people experiencing homelessness. We have a diverse funding base and we manage our resources to ensure fiscal accountability and sustainability in a transparent manner. Crossroads is the employer of choice for highly skilled professionals in the field. We are seen as collaborators locally, regionally and nationally and are generously supported by an active and engaged community.</h4>
   </div>
-  <h2 id="story-headers">2016</h2>
-  <div class="stories">
-    <p>On July 1, 2016, the Women’s Center of RI merged into the Domestic Violence Program of Crossroads RI. As domestic violence is one of the leading causes of homelessness for women and children, both organizations strive to empower vulnerable individuals and families to overcome homelessness and live, safe, self-sufficient lives free of violence. The merger has enabled us to better address the connection between domestic violence and homelessness.
-    </p>
-  </div>
-  <a id="next-button" href="/Handbook" data-navigo>Next Lesson</a>
+  <h2 id="value">Value</h2>
+  <div class="vision-value-container">
+  <img src="https://i.pinimg.com/originals/08/bb/07/08bb07e975e9cd784a9c7fd0694d4626.png"  width="auto" height= "100"/>
+  <h4>
+  Safety – promoting an environment free from physical and emotional harm and ensuring a feeling of security and comfort to all.<br></br>
+  Respect – acknowledging the intrinsic worth of every person.<br></br>
+  Effectiveness – delivering services and managing the organization with efficiency, professionalism, innovation and accountability.</h4>
+</div>
+  <a id="next-button" href="/Do" data-navigo>Next Lesson: What We Do</a>
 </div>
 `;
