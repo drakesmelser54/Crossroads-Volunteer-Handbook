@@ -140,7 +140,7 @@ p {
 .home-container {
   height: 30vh;
   width: 20vw;
-  margin-bottom: 15%;
+  margin-bottom: 20%;
   display: flex;
   flex-direction: column;
   color: white;
@@ -297,7 +297,7 @@ select {
   border: 4px solid #b492c4;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   text-decoration: none;
-  height: 80vh;
+  height: 85vh;
   width: 60vw;
 }
 
@@ -315,6 +315,7 @@ select {
   font-family: "Quicksand", sans-serif;
   padding: 10px 20px;
   cursor: pointer;
+  margin: 4vh 0;
 }
 
 .lesson-boxes {
@@ -369,7 +370,7 @@ select {
 
 /*-------Our Story----------*/
 .story-jumbotron {
-  height: 150vh;
+  height: 100%;
   width: 100%;
   background-color: whitesmoke;
   padding-top: 10vh;
@@ -380,7 +381,7 @@ select {
   align-items: center;
 }
 
-.upper-story-container {
+.upper-container {
   height: 20vh;
   width: 100%;
   background-color: whitesmoke;
@@ -392,38 +393,34 @@ select {
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
 }
 
-.story-images {
+.upper-container > a {
+  text-decoration: none;
+  color:#b492c4;
+  padding: 5vh 18vw 0 0;
+}
+
+.story-photos {
   height: auto;
   width: 30vw;
+  padding: 1vh 0vw;
 }
-#previous-lesson {
-  display: inline-flex;
-  align-items: baseline;
-  padding-right: 15vw;
-  color: #b492c4;
-}
+
+
 .stories {
   height: auto;
   width: 40vw;
-  background-color: white;
-  border: 2px solid #b492c4;
   color: black;
-  padding: 15px;
-  text-align: left;
-  margin-bottom: 5vh;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: larger;
+  text-align: center;
+  padding-bottom: 5vh;
+  border-bottom: 1px solid #6e3a84;
 }
 
-#history-header {
-  border: 2px solid black;
-  color: black;
-  background-color: white;
-  padding: 10px;
-  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
-}
 #story-headers {
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid #6e3a84;
   color: black;
+  margin-top: 5vh;
+  padding: 10px;
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
 }
 
@@ -504,37 +501,4 @@ select {
 }
 
 
-/*footer------------*/
-.footer {
-  height: 20vh;
-  width: auto;
-  background-color: #3d4452;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
 
-.footer > h4 {
-  border-bottom: 1px solid white;
-  padding-bottom: 20px;
-}
-.footer-links {
-  display: inline-flex;
-  font-size: 4vh;
-  width: 20vw;
-  justify-content: space-between;
-  text-decoration: none;
-  color: white;
-}
-
-.footer-links > a {
-  text-decoration: none;
-  color: white;
-}
-
-/*----------media querys-------------*/
-
-/*-----Our Story----*/
