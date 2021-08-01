@@ -2,12 +2,7 @@ export default () => `
 <div class="lesson-path">
   <div class="welcome-box">
     <h2>Welcome to the Crossroads Volunteer Handbook</h2>
-    <video controls width="350">
-      <source src="https://i.imgur.com/MasZrn8.mp4">
-      <source src="https://i.imgur.com/MasZrn8.mp4">
-            type="video/mp4">
-    Sorry, your browser doesn't support embedded videos.
-    </video>
+    <iframe width="350" height="370" src="https://www.youtube.com/embed/BFWbaGzMzd0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <a id="lesson-button" href="/Handbook" data-navigo>View Handbook</a>
   </div>
 </div>

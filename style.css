@@ -290,14 +290,20 @@ select {
 .welcome-box {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   border: 1px none;
   background-color: #f8f8f8;
+  border: 4px solid #b492c4;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   text-decoration: none;
   height: 80vh;
   width: 60vw;
+}
+
+.welcome-box > h2 {
+  border-bottom: 1px solid #b492c4;
+  padding-bottom: 2vh;
 }
 #lesson-button,
 #next-button {
