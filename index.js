@@ -35,9 +35,20 @@ function render(st = state.Home) {
   `;
 
   router.updatePageLinks();
-  eventListenerBundler(st);
-}
 
+  eventListenerBundler(st);
+
+  scrollToTop();
+
+}
+//-----scroll to top------/
+function scrollToTop() {
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
+}
 //---------------------------------Event Listener Bundler-------------------------------------------
 function eventListenerBundler(st) {
 

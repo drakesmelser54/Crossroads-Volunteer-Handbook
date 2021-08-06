@@ -403,7 +403,7 @@ select {
 
 .upper-container > a {
   text-decoration: none;
-  color:#b492c4;
+  color: #b492c4;
   padding: 5vh 18vw 0 0;
 }
 
@@ -412,7 +412,6 @@ select {
   width: 30vw;
   padding: 1vh 0vw;
 }
-
 
 .stories {
   height: auto;
@@ -432,18 +431,16 @@ select {
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
 }
 
-
 /*---------------Mission, Vision, and Values Page-------------*/
 .mission-photos {
-    height: auto;
-    width: 40vw;
-    padding-top: 10vh;
+  height: auto;
+  width: 40vw;
+  padding-top: 10vh;
 }
 
 .mission-container {
-  background-image:
-  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url("https://raw.githubusercontent.com/drakesmelser54/Crossroads-Volunteer-Handbook/master/images/Screen%20Shot%202021-07-31%20at%2011.25.05%20PM.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://raw.githubusercontent.com/drakesmelser54/Crossroads-Volunteer-Handbook/master/images/Screen%20Shot%202021-07-31%20at%2011.25.05%20PM.png");
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -451,10 +448,9 @@ select {
   justify-content: center;
   text-align: center;
   color: white;
-  margin: 10vh 0;;
+  margin: 10vh 0;
   height: 90vh;
   width: 70%;
-
 }
 
 .mission-container > h3 {
@@ -480,7 +476,7 @@ select {
   margin-bottom: 10vh;
 }
 
-.vision-value-container >img {
+.vision-value-container > img {
   padding-right: 5vw;
 }
 
@@ -492,7 +488,7 @@ select {
   width: 40%;
 }
 
-.do-container >h2 {
+.do-container > h2 {
   border-bottom: 1px solid #b492c4;
   padding: 10vh;
 }
@@ -508,7 +504,7 @@ select {
 #programs-header {
   border-bottom: 1px solid #b492c4;
   border-top: 1px solid #b492c4;
-  padding: 10vh
+  padding: 10vh;
 }
 .do-column-container {
   width: 100%;
@@ -535,6 +531,60 @@ select {
   border-bottom: 1px solid #b492c4;
   padding: 2vh 8vw;
 }
+
+/*-----Org. Chart------*/
+.org-jumbotron {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://www.thehorizonfoundation.org/wp-content/uploads/2018/08/iStock-697438336.jpg");
+  background-size: cover;
+  height: 110vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.org-box, .right-org-box {
+  height: 12vh;
+  width: 15vw;
+  background-color: #6e3a8463;
+  border: 2px solid #ffc107;
+  color: white;
+  text-align: center;
+  font-size: small;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.org-box > h3 {
+  border-bottom: 1px solid #b492c4;
+  padding-bottom: 6%;
+}
+
+.right-org-box > h3  {
+  border-bottom: 1px solid #b492c4;
+  padding-bottom: 2%;
+}
+.between-orgs {
+  width: 10vw;
+  border-bottom: 1px solid #ffc107;
+}
+
+.right-org-container {
+  height: 100vh;
+  width: 20vw;
+  border-left: 1px solid #ffc107;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+}
+
+
+.right-org-box {
+  height: 10vh;
+  width: 13vw;
+}
+
 /*----------completion form----------------*/
 .completion-container {
   display: flex;
@@ -610,6 +660,3 @@ select {
   float: left;
   color: #ffc107;
 }
-
-
-
