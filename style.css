@@ -25,7 +25,7 @@ a {
   font-family: "Quicksand", sans-serif;
 }
 p {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 li {
@@ -389,6 +389,10 @@ select {
   align-items: center;
 }
 
+.story-jumbotron > h2 {
+  border-bottom: 1px solid #b492c4;
+  padding-bottom: 5vh;
+}
 .upper-container {
   height: 20vh;
   width: 100%;
@@ -544,7 +548,8 @@ select {
   justify-content: center;
 }
 
-.org-box, .right-org-box {
+.org-box,
+.right-org-box {
   height: 12vh;
   width: 15vw;
   background-color: #6e3a8463;
@@ -560,7 +565,7 @@ select {
   padding-bottom: 6%;
 }
 
-.right-org-box > h3  {
+.right-org-box > h3 {
   border-bottom: 1px solid #b492c4;
   padding-bottom: 2%;
 }
@@ -579,11 +584,104 @@ select {
   justify-content: space-between;
 }
 
-
 .right-org-box {
   height: 10vh;
   width: 13vw;
 }
+
+/*----------------volunteering page---------------------*/
+#opportunity-header {
+  border-bottom: 1px solid #b492c4;
+  padding: 5vh 0;
+}
+.upper-volunteering-container {
+  height: 50vh;
+  width: 100%;
+  background-color: #f9f6f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #b492c4;
+  padding-bottom: 5vh;
+}
+
+.volunteering-icon-container {
+  text-align: center;
+}
+
+.confidentiality-statements,
+.ethics-statements,
+.logistics-statements,
+.emergency-statements {
+  text-align: center;
+  width: 50vw;
+  padding: 5vh 0;
+}
+
+.emergency-statements {
+  text-align: left;
+  width: 50vw;
+  padding: 5vh 0;
+}
+#volunteering-headers {
+  border-bottom: 1px solid #b492c4;
+  padding-bottom: 5vh;
+}
+
+#ethics-headers {
+  border-bottom: 1px solid #f5f5f5;
+  padding-bottom: 5vh;
+}
+
+#emergency-headers {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 5vh 0;
+}
+.volunteering-icons {
+  padding: 5vh 0;
+}
+#dvp-confidentiality {
+  text-align: left;
+  padding-bottom: 5vh;
+}
+
+.ethics {
+  height: 100%;
+  width: 100%;
+  background-color: #b179bc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #eeeeee;
+}
+
+.logistics,
+.mailing-container,
+.emergency-statements,
+.ethics-statements,
+ {
+  text-align: left;
+}
+.mailing-container {
+  text-align: left;
+}
+
+.emergency-container {
+  width: 100%;
+  height: 100%;
+  background-color: #ce2029;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.emergency-statements > ul {
+  padding-bottom: 5vh;
+}
+
+/*-------------Policy------------------------*/
 
 /*----------completion form----------------*/
 .completion-container {
