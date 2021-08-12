@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
 /*imports--------------------*/
+import timeline from './components/timeline'
 import { Nav, Main, Footer } from "./components";
 import * as state from "./store";
 import Navigo from "navigo";
@@ -17,6 +18,9 @@ router.hooks({
       markAllLessonsComplete()
       console.log(state.User);
     }
+    // currently firing on every page, but should only fire on pages with timelines somehow
+    // eslint-disable-next-line no-undef
+    timeline(document.querySelectorAll('.timeline'));
   }
 })
 

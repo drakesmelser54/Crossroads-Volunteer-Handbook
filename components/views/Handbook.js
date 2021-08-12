@@ -1,4 +1,26 @@
 export default () => `
+  <div class="timeline">
+    <div class="timeline__wrap">
+      <div class="timeline__items">
+        <div class="timeline__item">
+          <div class="timeline__content">
+            Your content / markup
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__content">
+            Your content / markup
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__content">
+            Your content / markup
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="lesson-path">
       <h2 id="progress-header">Hello</h2>
       <div class="progress"></div>
