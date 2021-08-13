@@ -659,8 +659,7 @@ select {
 .logistics,
 .mailing-container,
 .emergency-statements,
-.ethics-statements,
- {
+.ethics-statements {
   text-align: left;
 }
 .mailing-container {
@@ -682,7 +681,94 @@ select {
 }
 
 /*-------------Policy------------------------*/
+#policy-header {
+  padding-top: 10vh;
+}
+.upper-policy-container {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 10vh 5vw;
+}
 
+.policy-statements {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  align-items: center;
+}
+
+.policy-statements > img {
+  height: auto;
+  width: 10vw;
+}
+
+.middle-policy-container,
+.lower-policy-container {
+  height: 100%;
+  width: 100%;
+  padding: 10vh 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid #b179bc;
+}
+
+.lower-policy-container {
+  border-bottom: 1px solid #b179bc;
+}
+
+.accordion {
+  background-color: #eee;
+  font-family: "Quicksand", sans-serif;
+  font-size: large;
+  color: black;
+  cursor: pointer;
+  margin: 0vh 0;
+  padding: 50px;
+  width: 60%;
+  text-align: left;
+  border: 1px solid #b179bc;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  background-color: #b179bc;
+  color: white;
+}
+
+.panel {
+  background-color: white;
+  width: 60%;
+  height: 100%;
+  border: 1px solid #b179bc;
+  text-align: left;
+  font-size: smaller;
+  display: none;
+  overflow: hidden;
+}
+
+.panel > ul ol {
+  padding: 2vh 5vw;
+}
+
+.panel > ul > li {
+  padding: 2vh 0;
+}
+
+.panel > p {
+  padding: 2vh 5vw;
+}
+
+
+/*------------dv overview-------------------*/
+/*--dvtimeline-*/
+.decades {
+  width: 60vw;
+  text-align: left;
+}
 /*----------completion form----------------*/
 .completion-container {
   display: flex;

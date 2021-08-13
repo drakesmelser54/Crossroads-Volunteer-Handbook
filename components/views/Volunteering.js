@@ -1,7 +1,7 @@
 export default () => `
 <div class="story-jumbotron">
   <div class="upper-container">
-    <a href="Do" data-navigo">
+    <a href="/Who" data-navigo">
     <p>&nbsp&nbspPrevious Lesson</p>
     </a>
     <h1 id="history-header">Volunteering</h1>
