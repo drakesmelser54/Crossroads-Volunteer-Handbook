@@ -66,18 +66,11 @@ function eventListenerBundler(st) {
   lessonComplete(st, "dv");
   dvTimeline(st);
   accordian(st);
-  keepState();
   logoutListener(st);
 }
 
 
-//-----------Nav Bar------------------//
-function keepState() {
-  document.getElementById('nav-handbook-link').addEventListener("click", function() {
-    getUserFromDb();
-    render(state.Handbook), router.navigate("/Handbook");
-  })
-}
+
 //----------signup-form-------------/
 function listenForSignup(st) {
   if (st.view === "Signup") {
