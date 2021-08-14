@@ -11,6 +11,8 @@ import { auth, db } from "./firebase";
 const router = new Navigo(window.location.origin);
 
 // Mark lessons as completed after navigating to Handbook page
+
+
 router.hooks({
   after(params) {
     if(params.page === 'Handbook') {
@@ -31,7 +33,7 @@ router
 //------------------------------------Render fxn----------------------------------------------------
 function render(st = state.Home) {
   document.querySelector("#root").innerHTML = `
-  ${Nav(state.Links)}
+  ${Nav(st)}
   ${Main(st)}
   `;
 
@@ -62,9 +64,20 @@ function eventListenerBundler(st) {
   lessonComplete(st, "volunteering");
   lessonComplete(st, "policy");
   lessonComplete(st, "dv");
+  dvTimeline(st);
+  accordian(st);
+  keepState();
   logoutListener(st);
 }
 
+
+//-----------Nav Bar------------------//
+function keepState() {
+  document.getElementById('nav-handbook-link').addEventListener("click", function() {
+    getUserFromDb();
+    render(state.Handbook), router.navigate("/Handbook");
+  })
+}
 //----------signup-form-------------/
 function listenForSignup(st) {
   if (st.view === "Signup") {
@@ -195,20 +208,22 @@ function resetUserInState() {
 //----------------Our Story Lesson Completion----------------//
 //-main complete fxn----//
 function lessonComplete(st, lessonName) {
-  if (st.view.toLowerCase() === lessonName) {
-    document
-      .querySelector("#next-button")
-      .addEventListener("click", (event) => {
-        event.preventDefault();
-        lessonDbUpdate(lessonName)
-        .then(() => {
-          console.log(lessonName, state.User.lessons)
-          state.User.lessons[lessonName] = true;
-          progress()
-          markAllLessonsComplete()
+    if (st.view.toLowerCase() === lessonName) {
+      document
+        .querySelector("#next-button")
+        .addEventListener("click", (event) => {
+          event.preventDefault();
+          lessonDbUpdate(lessonName)
+          .then(() => {
+            console.log(lessonName, state.User.lessons)
+            state.User.lessons[lessonName] = true;
+            if (st.view === "Handbook") {
+              progress()
+              markAllLessonsComplete()
+            }
+          })
         })
-      })
-  }
+    }
 }
 
 function lessonDbUpdate(lessonName) {
@@ -243,8 +258,10 @@ function markAllLessonsComplete() {
 }
 
 
+
 //----progress-bar------/
 function progress() {
+  console.log(state.User);
   // turn the user lessons into an array of booleans,
 // in this case [true, false, true]
 let totalLessonValues = Object.values(state.User.lessons)
@@ -257,6 +274,7 @@ let percentLessonsCompleted = finishedLessons.length / totalLessonValues.length
 let scroll = percentLessonsCompleted * 100
 
 let progress = document.querySelector('.progress')
+
 progress.style.setProperty('--scroll', scroll + '%');
 
 progressHeader(percentLessonsCompleted);
@@ -270,29 +288,40 @@ function progressHeader (percentLessonsCompleted) {
 }
 
 /*-------accordian on policy page---------*/
-let acc = document.getElementsByClassName("accordion");
-let i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
-    this.classList.toggle("active");
+function accordian(st) {
+  if (st.view === "Policy") {
+    let acc = document.getElementsByClassName("accordion");
+    let i;
 
-    /* Toggle between hiding and showing the active panel */
-    let panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        let panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
     }
-  });
+  }
 }
 
 
+
 /*----------timeline on dv overview page---------*/
-timeline(document.querySelectorAll('.timeline'), {
-  verticalStartPosition: 'right',
-  verticalTrigger: '150px'
-});
+function dvTimeline (st) {
+  if (st.view === "Dv") {
+    timeline(document.querySelectorAll('.timeline'), {
+      verticalStartPosition: 'right',
+      verticalTrigger: '150px'
+    });
+
+  }
+}
 
