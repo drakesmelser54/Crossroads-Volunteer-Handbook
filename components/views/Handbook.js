@@ -64,12 +64,12 @@ export default () => `
   </div>
   <div class="lesson-boxes">
   <div class="lesson-top">
-    <h2>Domoestic Violence Overview</h2>
+    <h2>Domoestic Violence Timeline</h2>
     <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
     <i id="time" class="far fa-clock"></i>
   </div>
   <div class="lesson-bottom" data-lesson="dv">
-    <a href="Dv" data-navigo>Start Lesson</a>
+    <a href="/DvTimeline" data-navigo>Start Lesson</a>
   </div>
 </div>
 </div>

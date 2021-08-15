@@ -4,9 +4,9 @@ export default () => `
     <a href="Policy" data-navigo">
       <p>&nbsp&nbspPrevious Lesson</p>
     </a>
-    <h1 id="history-header">Domestic Violence Overview</h1>
+    <h1 id="history-header">Domestic Violence Timeline</h1>
   </div>
-  <h2>Domestic Violence Awareness Timeline</h2>
+  <img id="timeline-icon" src="https://github.com/drakesmelser54/Crossroads-Volunteer-Handbook/blob/master/images/timeline-icon.jpg?raw=true" alt="timeline" height="150"/>
   <h2>1970's and 1980's</h2>
   <div class="decades">
     <ul>
@@ -55,7 +55,7 @@ export default () => `
       </div>
     </div>
   </div>
-  <h2>1990's, 2000's, and 2010's</h2>
+  <h2 id="decade-headers">1990's, 2000's, and 2010's</h2>
   <div class="decades">
     <ul>
       <li>Violence Against Women Act (VAWA) national legislation is passed, making funding available for victim’s services, prosecution, and law enforcement. This funding is through the RI Coalition (RICADV)</li>

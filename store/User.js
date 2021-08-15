@@ -8,6 +8,6 @@ export default {
     who: false,
     volunteering: false,
     policy: false,
-    dv: false
+    dvtimeline: false
   }
 };

@@ -763,12 +763,18 @@ select {
 }
 
 
-/*------------dv overview-------------------*/
-/*--dvtimeline-*/
+/*------------dv timeline-------------------*/
+
+
+#timeline-icon {
+  padding-top: 10vh;
+}
 .decades {
   width: 60vw;
   text-align: left;
+  margin-bottom: 10vh;
 }
+
 /*----------completion form----------------*/
 .completion-container {
   display: flex;

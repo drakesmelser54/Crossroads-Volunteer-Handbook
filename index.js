@@ -63,7 +63,7 @@ function eventListenerBundler(st) {
   lessonComplete(st, "who");
   lessonComplete(st, "volunteering");
   lessonComplete(st, "policy");
-  lessonComplete(st, "dv");
+  lessonComplete(st, "dvtimeline");
   dvTimeline(st);
   accordian(st);
   logoutListener(st);
@@ -114,7 +114,7 @@ function addUserToStateAndDB(email) {
       who: false,
       volunteering: false,
       policy: false,
-      dv: false
+      dvtimeline: false
     }
   });
 }
@@ -195,7 +195,7 @@ function resetUserInState() {
   state.User.lessons.do = false;
   state.User.lessons.who = false;
   state.User.lessons.policy = false;
-  state.User.lessons.dv = false;
+  state.User.lessons.dvtimeline = false;
 }
 
 //----------------Our Story Lesson Completion----------------//
@@ -309,7 +309,7 @@ function accordian(st) {
 
 /*----------timeline on dv overview page---------*/
 function dvTimeline (st) {
-  if (st.view === "Dv") {
+  if (st.view === "Dvtimeline") {
     timeline(document.querySelectorAll('.timeline'), {
       verticalStartPosition: 'right',
       verticalTrigger: '150px'

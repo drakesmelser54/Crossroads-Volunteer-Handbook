@@ -77,6 +77,6 @@ export default () => `
       </ul>
     </div>
   </div>
-  <a id="next-button" href="/Dv" data-navigo>Next Lesson: Domestic Violence Overview</a>
+  <a id="next-button" href="/Dvtimeline" data-navigo>Next Lesson: Domestic Violence Timeline</a>
 </div>
 `;
