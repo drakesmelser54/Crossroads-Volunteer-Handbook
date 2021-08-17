@@ -63,14 +63,24 @@ export default () => `
     </div>
   </div>
   <div class="lesson-boxes">
-  <div class="lesson-top">
-    <h2>Domoestic Violence Timeline</h2>
-    <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
-    <i id="time" class="far fa-clock"></i>
+    <div class="lesson-top">
+      <h2>Domoestic Violence Timeline</h2>
+      <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
+      <i id="time" class="far fa-clock"></i>
+    </div>
+    <div class="lesson-bottom" data-lesson="dv">
+    <a href="/Dvtimeline" data-navigo>Start Lesson</a>
+    </div>
   </div>
-  <div class="lesson-bottom" data-lesson="dv">
-    <a href="/DvTimeline" data-navigo>Start Lesson</a>
+  <div class="lesson-boxes">
+    <div class="lesson-top">
+      <h2>Domoestic Violence Overview</h2>
+      <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
+      <i id="time" class="far fa-clock"></i>
+    </div>
+    <div class="lesson-bottom" data-lesson="dv">
+    <a href="/Dvoverview" data-navigo>Start Lesson</a>
+    </div>
   </div>
-</div>
 </div>
 `;

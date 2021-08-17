@@ -64,6 +64,7 @@ function eventListenerBundler(st) {
   lessonComplete(st, "volunteering");
   lessonComplete(st, "policy");
   lessonComplete(st, "dvtimeline");
+  lessonComplete(st, "dvoverview");
   dvTimeline(st);
   accordian(st);
   logoutListener(st);
@@ -114,7 +115,9 @@ function addUserToStateAndDB(email) {
       who: false,
       volunteering: false,
       policy: false,
-      dvtimeline: false
+      dvtimeline: false,
+      dvoverview: false,
+      identify: false
     }
   });
 }
@@ -196,6 +199,8 @@ function resetUserInState() {
   state.User.lessons.who = false;
   state.User.lessons.policy = false;
   state.User.lessons.dvtimeline = false;
+  state.User.lessons.dvoverview = false;
+  state.User.lessons.identify = false;
 }
 
 //----------------Our Story Lesson Completion----------------//
@@ -283,7 +288,7 @@ function progressHeader (percentLessonsCompleted) {
 /*-------accordian on policy page---------*/
 
 function accordian(st) {
-  if (st.view === "Policy") {
+  if (st.view === "Policy" || st.view === "Dvoverview") {
     let acc = document.getElementsByClassName("accordion");
     let i;
 
