@@ -861,6 +861,54 @@ select {
   padding: 10vh 0;
 }
 
+/*------------How to identify dv--------------*/
+.identify-container {
+ display: inline-flex;
+ width: 100%;
+ align-items: center;
+ justify-content: space-around;
+ background-color: white;
+ padding: 10vh 10vw;
+}
+
+.identify-container > img {
+  padding-right: 20vw;
+}
+#identify-text {
+  width: 30vw;
+  padding-left: 20vw;
+}
+.identify-bubble {
+  font-size: smaller;
+  width: 20vw;
+  height: 40vh;
+  text-align: left;
+  border: 4px solid #6e3a84;
+  border-radius: 5%;
+  padding: 10px;
+  margin-bottom: 10vh;
+}
+
+#border-identity {
+  border-bottom: 1px solid #b492c4;
+}
+
+.red-flags,
+.speak {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 15vh 0;
+  text-align: left;
+  color: black;
+  border-bottom: 1px solid #b492c4;
+}
+
+.speak-text {
+  width: 30vw;
+  margin-right: 5vw;
+}
 /*----------completion form----------------*/
 .completion-container {
   display: flex;

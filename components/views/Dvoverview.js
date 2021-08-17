@@ -97,6 +97,6 @@ export default () => `
         <img src="https://bloximages.newyork1.vip.townnews.com/aberdeennews.com/content/tncms/assets/v3/editorial/8/12/812d77c4-ad29-11e7-8909-6768678335f2/59dcaad43f393.image.jpg?resize=1200%2C1199" alt="power-wheel" height="400" />
       </div>
     </section>
-  <a id="next-button" href="/" data-navigo>Next Lesson: How to Identify Domestic Violence</a>
+  <a id="next-button" href="/Identity" data-navigo>Next Lesson: How to Identify Domestic Violence</a>
 </div>
 `;

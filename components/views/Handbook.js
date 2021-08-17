@@ -82,5 +82,15 @@ export default () => `
     <a href="/Dvoverview" data-navigo>Start Lesson</a>
     </div>
   </div>
+  <div class="lesson-boxes">
+    <div class="lesson-top">
+      <h2>How to Identify Domestic Violence</h2>
+      <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
+      <i id="time" class="far fa-clock"></i>
+    </div>
+    <div class="lesson-bottom" data-lesson="dv">
+    <a href="/Identify" data-navigo>Start Lesson</a>
+    </div>
+  </div>
 </div>
 `;
