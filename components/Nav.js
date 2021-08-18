@@ -5,6 +5,6 @@ export default () => `
     </a>
     <a id="log-out" href="/Home" data-navigo>Log-Out</a>
     <a href="/Handbook" class="nav-btns" data-navigo>Volunteer Handbook</a>
-    <a href="/Contact" class="nav-btns" data-navigo>Contact</a>
+    <a id="nav-contact" href="/Contact" class="nav-btns" data-navigo>Contact</a>
   </nav>
 `;

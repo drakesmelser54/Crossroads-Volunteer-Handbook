@@ -762,9 +762,7 @@ select {
   padding: 2vh 5vw;
 }
 
-
 /*------------dv timeline-------------------*/
-
 
 #timeline-icon {
   padding-top: 10vh;
@@ -863,12 +861,12 @@ select {
 
 /*------------How to identify dv--------------*/
 .identify-container {
- display: inline-flex;
- width: 100%;
- align-items: center;
- justify-content: space-around;
- background-color: white;
- padding: 10vh 10vw;
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  padding: 10vh 10vw;
 }
 
 .identify-container > img {
@@ -983,4 +981,258 @@ select {
   width: 100%;
   float: left;
   color: #ffc107;
+}
+
+/*--------iphone x and above------------*/
+@media (max-width: 815px) {
+  /*-----nav-bar------*/
+  .nav-bar {
+    height: 8vh;
+  }
+  .nav-btns,
+  #log-out {
+    font-size: small;
+  }
+
+  #logo {
+    height: 4vh;
+    width: auto;
+    padding-right: 10vw;
+    padding-left: 5vw;
+  }
+
+  #nav-contact {
+    padding-right: 5vw;
+  }
+
+  /*------home----------*/
+  .home-container {
+    margin-bottom: 40vh;
+    padding: 15px;
+  }
+
+  #log-container {
+    display: inline-flex;
+  }
+
+  #login-button {
+    margin-right: 5vw;
+  }
+
+  /*-----------login-signup-----------*/
+  .login-signup-container {
+    margin-bottom: 40vh;
+  }
+
+  /*-------------welcome-container-----------*/
+  .welcome-box {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  /*------------handbook--------------*/
+
+  .lesson-path,
+  .lesson-boxes {
+    font-size: small;
+  }
+
+  .lesson-boxes {
+    width: 90vw;
+    height: 8vh;
+  }
+
+  .lesson-top {
+    font-size: x-small;
+    display: inline-flex;
+    justify-content: left;
+  }
+
+  /*-------story--------*/
+  .upper-container {
+    text-align: center;
+    font-size: smaller;
+    height: 10vh;
+    padding-bottom: 5vh;
+  }
+
+  .story-photos {
+    width: 100vw;
+  }
+
+  .story-jumbotron {
+    font-size: smaller;
+  }
+
+  /*-------mission, vision, and values---------*/
+  .mission-container {
+    width: 100vw;
+  }
+
+  .vision-value-container {
+    display: flex;
+    flex-direction: column;
+    font-size: smaller;
+  }
+
+  .vision-value-container > img {
+    height: 8vh;
+  }
+
+  /*----------what-we-do---------*/
+  .do-container {
+    width: 80vw;
+  }
+  .do-column-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10vh 0;
+  }
+
+  .do-columns {
+    width: 100vw;
+    margin-bottom: 5vh;
+  }
+
+  /*------who we are---------*/
+  .org-jumbotron {
+    height: 250vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background: #6e3a84;
+    padding-top: 10vh;
+  }
+
+  .org-box,
+  .right-org-box {
+    background-color: #f5f5f5;
+    color: black;
+    width: 30vw;
+    height: auto;
+    padding: 20px;
+  }
+  .between-orgs {
+    height: 10vh;
+    border-right: 1px solid #ffc107;
+    border-bottom: none;
+    margin-right: 10vw;
+  }
+
+  .right-org-container {
+    margin-right: 20vw;
+  }
+
+  /*----------------volunteering---------------*/
+  .upper-volunteering-container {
+    display: block;
+    height: 100%;
+  }
+
+  .confidentiality-statements,
+  .ethics-statements,
+  .logistics-statements,
+  .emergency-statements {
+    width: 80vw;
+  }
+
+  /*--------------policy------------------------*/
+  .upper-policy-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .policy-statements {
+    width: 80vw;
+  }
+
+  .accordion,
+  .panel {
+    width: 90vw;
+  }
+
+  /*-----------------domestic-violence-timeline---------------*/
+  .decades {
+    width: 80vw;
+  }
+
+  /*--------------domestic-violence-overview------------------*/
+  .dv-bubble {
+    width: 80vw;
+  }
+
+  .cause-effect,
+  .effect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5vh;
+  }
+
+  .cause-effect > img {
+    height: 20vh;
+    width: 20vw;
+  }
+  .cause {
+    padding-bottom: 5vh;
+  }
+  .effect {
+    border-top: 1px solid #b492c4;
+    width: 60vw;
+  }
+
+  .TEH {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #arrows {
+    color: whitesmoke;
+  }
+  .cycles {
+    width: 60vw;
+  }
+
+  /*------------how-to-identify---------------*/
+  #border-identity {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .identify-bubble {
+    height: 20vh;
+    width: 80vw;
+    border-radius: 0%;
+    padding: 20px;
+  }
+
+  .red-flags,
+  .speak {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 5vh;
+  }
+
+  .red-flags > img {
+    height: 30vh;
+    padding-bottom: 5vh;
+  }
+  .speak > img {
+    height: 25vh;
+    padding-bottom: 5vh;
+  }
+
+  .speak-text {
+    width: 60vw;
+  }
+
+  /*------------------completion page--------------------*/
+  /*-------------------contact-page-----------------------*/
+  .completion-container,
+  .contact-container {
+    width: 90vw;
+  }
 }

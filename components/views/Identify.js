@@ -80,6 +80,6 @@ export default () => `
     </div>
     <img src="https://github.com/drakesmelser54/Crossroads-Volunteer-Handbook/blob/master/images/megaphone.jpg?raw=true" height="350" alt="megaphone speaker" />
   </section>
-  <a id="next-button" href="/" data-navigo>Next Lesson: Abusers, Victims, and Survivors</a>
+  <a id="next-button" href="/Completion" data-navigo>Complete Handbook</a>
 </div>
 `;

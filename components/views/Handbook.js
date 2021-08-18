@@ -4,8 +4,8 @@ export default () => `
       <div class="progress"></div>
     <div class="lesson-boxes">
       <div class="lesson-top">
-          <h2>Our Story</h2>
-          <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
+          <h3>Our Story</h3>
+          <p id="time">&nbsp&nbsp&nbsp&nbsp5 mins&nbsp&nbsp</p>
           <i id="time" class="far fa-clock"></i>
       </div>
       <div class="lesson-bottom" data-lesson="story">
@@ -15,7 +15,7 @@ export default () => `
     <div class="lesson-boxes">
       <div class="lesson-top">
         <h2>Mission, Vision, & Values</h2>
-        <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
+        <p id="time">&nbsp&nbsp&nbsp&nbsp10 mins&nbsp&nbsp</p>
         <i id="time" class="far fa-clock"></i>
       </div>
       <div class="lesson-bottom" data-lesson="mission">
@@ -25,7 +25,7 @@ export default () => `
     <div class="lesson-boxes">
       <div class="lesson-top">
         <h2>What We Do</h2>
-        <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
+        <p id="time">&nbsp&nbsp&nbsp&nbsp20 mins&nbsp&nbsp</p>
         <i id="time" class="far fa-clock"></i>
       </div>
       <div class="lesson-bottom" data-lesson="do">
@@ -35,7 +35,7 @@ export default () => `
     <div class="lesson-boxes">
       <div class="lesson-top">
         <h2>Who We Are</h2>
-        <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
+        <p id="time">&nbsp&nbsp&nbsp&nbsp5 mins&nbsp&nbsp</p>
         <i id="time" class="far fa-clock"></i>
       </div>
       <div class="lesson-bottom" data-lesson="who">
@@ -64,31 +64,31 @@ export default () => `
   </div>
   <div class="lesson-boxes">
     <div class="lesson-top">
-      <h2>Domoestic Violence Timeline</h2>
+      <h2>Domestic Violence Timeline</h2>
       <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
       <i id="time" class="far fa-clock"></i>
     </div>
-    <div class="lesson-bottom" data-lesson="dv">
+    <div class="lesson-bottom" data-lesson="dvtimeline">
     <a href="/Dvtimeline" data-navigo>Start Lesson</a>
     </div>
   </div>
   <div class="lesson-boxes">
     <div class="lesson-top">
-      <h2>Domoestic Violence Overview</h2>
+      <h2>Domestic Violence Overview</h2>
       <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
       <i id="time" class="far fa-clock"></i>
     </div>
-    <div class="lesson-bottom" data-lesson="dv">
+    <div class="lesson-bottom" data-lesson="dvoverview">
     <a href="/Dvoverview" data-navigo>Start Lesson</a>
     </div>
   </div>
   <div class="lesson-boxes">
     <div class="lesson-top">
       <h2>How to Identify Domestic Violence</h2>
-      <p id="time">&nbsp&nbsp&nbsp&nbsp30 mins&nbsp&nbsp</p>
+      <p id="time">&nbsp&nbsp&nbsp&nbsp15 mins&nbsp&nbsp</p>
       <i id="time" class="far fa-clock"></i>
     </div>
-    <div class="lesson-bottom" data-lesson="dv">
+    <div class="lesson-bottom" data-lesson="identify">
     <a href="/Identify" data-navigo>Start Lesson</a>
     </div>
   </div>

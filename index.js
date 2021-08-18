@@ -65,6 +65,7 @@ function eventListenerBundler(st) {
   lessonComplete(st, "policy");
   lessonComplete(st, "dvtimeline");
   lessonComplete(st, "dvoverview");
+  lessonComplete(st, "identify");
   dvTimeline(st);
   accordian(st);
   logoutListener(st);
@@ -136,7 +137,8 @@ function listenForLogin(st) {
         const inputs = inputList.map((input) => input.value);
         let email = inputs[0];
         let password = inputs[1];
-        auth.signInWithEmailAndPassword(email, password).then(() => {
+        auth.signInWithEmailAndPassword(email, password)
+        .then(() => {
           getUserFromDb(email).then(() => {
             render(state.Welcome)
             router.navigate("/Welcome")
@@ -145,7 +147,6 @@ function listenForLogin(st) {
       });
   }
 }
-
 
 //--------get user from db-------//
 function getUserFromDb(email) {
@@ -203,6 +204,13 @@ function resetUserInState() {
   state.User.lessons.identify = false;
 }
 
+
+//----------------Prevent Non-Signed In User's From Entering--------//
+function stopHandbook(st) {
+  if (st.view === "Handbook" && !state.User.loggedIn) return
+  render(state.Home)
+  router.navigate("/Home")
+}
 //----------------Our Story Lesson Completion----------------//
 //-main complete fxn----//
 function lessonComplete(st, lessonName) {
