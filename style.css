@@ -1092,6 +1092,8 @@ select {
 
   .do-columns {
     width: 100vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
     margin-bottom: 5vh;
   }
 
