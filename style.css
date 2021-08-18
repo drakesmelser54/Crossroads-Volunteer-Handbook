@@ -1084,17 +1084,21 @@ select {
   .do-container {
     width: 80vw;
   }
+
   .do-column-container {
     display: flex;
+    height: 150vh;
     flex-direction: column;
     padding: 10vh 0;
   }
 
   .do-columns {
     width: 100vw;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;;
+  }
+
+  .do-columns > h4 {
+    padding: 0 5vw;
   }
 
   /*------who we are---------*/

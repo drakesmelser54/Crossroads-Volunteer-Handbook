@@ -31,7 +31,7 @@ export default () => `
   </ul>
 </div>
 <h2 id="programs-header">Domestic Violence Programs & Services</h2>
-<img src="https://raw.githubusercontent.com/drakesmelser54/Crossroads-Volunteer-Handbook/master/images/house%20(1).jpg" alt="house sketch" height="300"/>
+<img id="house-icon" src="https://raw.githubusercontent.com/drakesmelser54/Crossroads-Volunteer-Handbook/master/images/house%20(1).jpg" alt="house sketch" height="300"/>
 <div class="do-column-container">
   <div class="do-columns">
     <h3>Residential Program</h3>
