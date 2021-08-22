@@ -48,6 +48,6 @@ export default () => `
     </h4>
   </div>
 </div>
-  <a id="next-button" href="/Who" data-navigo>Next Lesson</a>
+  <a id="next-button" href="/Who" data-navigo>Next Lesson: Who We Are</a>
 </div>
 `;
